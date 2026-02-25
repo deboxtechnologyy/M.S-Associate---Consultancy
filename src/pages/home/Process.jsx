@@ -333,7 +333,7 @@ export default function ProcessSection() {
       `}</style>
 
       <section className="ps-wrap" id="process">
-        <div style={{ maxWidth: "1160px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: "1300px", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
           {/* Header */}
           <div ref={headerRef} className={`ps-header${headerInView ? " visible" : ""}`}>

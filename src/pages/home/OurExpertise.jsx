@@ -19,7 +19,7 @@ export default function ExpertiseSection() {
       background: "linear-gradient(135deg, #f8f9fb 0%, #eef2f7 100%)",
     }}>
       <div style={{
-        maxWidth: "1400px", margin: "0 auto",
+        maxWidth: "1300px", margin: "0 auto",
         display: "flex", gap: "80px", alignItems: "center", flexWrap: "wrap",
       }}>
 

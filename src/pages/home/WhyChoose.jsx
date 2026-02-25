@@ -254,7 +254,7 @@ export default function WhyChooseUs() {
       `}</style>
 
       <section className="wcu-wrap" id="why-choose-us">
-        <div style={{ maxWidth: "80rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: "78rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
           {/* Header */}
           <div ref={headerRef} className={`wcu-header${headerInView ? " visible" : ""}`}>

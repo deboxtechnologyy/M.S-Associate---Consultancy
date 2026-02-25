@@ -442,34 +442,8 @@ const Footer = () => {
         <div className="blob1" />
         <div className="blob2" />
 
-        {/* Free Consultation Banner */}
-        <div className="consult-banner">
-          <div>
-            <p style={{ fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#fff", fontWeight: 500, marginBottom: "8px" }}>
-              Your First Step Toward Justice
-            </p>
-            <h2 className="adv-title" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", fontWeight: 700, lineHeight: 1.2 }}>
-              Get a Free Legal Consultation
-            </h2>
-            <p style={{ fontSize: "0.8rem", opacity: 0.5, fontWeight: 300, marginTop: "8px" }}>
-              Speak with a senior advocate — no obligations, no fees.
-            </p>
-          </div>
-
-          <div style={{ display: "flex", alignItems: "center", gap: "28px", flexWrap: "wrap" }}>
-            <div className="phone-badge">
-              <div className="phone-icon">📞</div>
-              <div>
-                <p style={{ fontSize: "0.68rem", opacity: 0.45, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "3px" }}>Call Now</p>
-                <p className="adv-title" style={{ fontSize: "1.15rem", fontWeight: 700, letterSpacing: "0.02em" }}>+91 98765 43210</p>
-              </div>
-            </div>
-            <button className="consult-btn">Book Consultation</button>
-          </div>
-        </div>
-
         {/* Main Content */}
-        <div style={{ maxWidth: "1220px", margin: "0 auto", padding: "56px 40px 40px" }}>
+        <div style={{ maxWidth: "1350px", margin: "0 auto", padding: "56px 40px 40px" }}>
           <div className="footer-grid">
 
             {/* Brand */}

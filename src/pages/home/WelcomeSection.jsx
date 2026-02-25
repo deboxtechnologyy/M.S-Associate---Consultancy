@@ -9,7 +9,7 @@ export default function WelcomeSection() {
   return (
     <section id="home-welcome" style={{ padding: "100px 5%", background: "#fff" }}>
       <div style={{
-        maxWidth: "1400px", margin: "0 auto",
+        maxWidth: "1300px", margin: "0 auto",
         display: "flex", gap: "80px", alignItems: "center", flexWrap: "wrap",
       }}>
 
