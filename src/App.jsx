@@ -4,6 +4,9 @@ import Header from './common-component/Header'
 import { BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 import Navbar from './common-component/Navbar'
 import Footer from './common-component/Footer'
+
+import Home from './pages/home/Home'
+
 import Blog from './pages/blog/Blog'
 import BlogDetail from './pages/blog/BlogDetails'
 import DivorceServicePage from './pages/service/Services'
@@ -17,15 +20,28 @@ import AboutPage from './pages/about/About'
 import ContactPage from './pages/contact/Contact'
 
 
+
 function App() {
   
   return (
 <>
+ 
 <Router>
-  <Header/>
-  
+ <Header/>
+
+
   <Routes>
-    <Route path='/' element={<Navbar/>}/>
+
+ 
+
+  
+
+    <Route path='/' element={
+      <div>
+           <Navbar/>
+           <Home/>
+      </div>
+ }/>
     <Route path="/blog" element={
       <div>
         <Navbar/>
@@ -105,7 +121,9 @@ function App() {
   </Routes>
 
   <Footer/>
+
 </Router>
+
 
 </>
   )
