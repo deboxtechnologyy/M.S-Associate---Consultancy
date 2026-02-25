@@ -469,7 +469,7 @@ const Footer = () => {
         </div>
 
         {/* Main Content */}
-        <div style={{ maxWidth: "1220px", margin: "0 auto", padding: "56px 40px 40px" }}>
+        <div style={{ maxWidth: "1300px", margin: "0 auto", padding: "56px 40px 40px" }}>
           <div className="footer-grid">
 
             {/* Brand */}
