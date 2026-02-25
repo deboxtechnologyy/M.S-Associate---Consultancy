@@ -4,7 +4,7 @@ const NAV_LINKS = [
   { label: "Home", href: "#" },
   { label: "About", href: "#" },
   { label: "Services", href: "#" },
-  { label: "Portfolio", href: "#" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "#" },
 ];
 
