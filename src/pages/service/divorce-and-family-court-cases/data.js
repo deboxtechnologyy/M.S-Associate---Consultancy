@@ -1,111 +1,111 @@
 export const tableOfContents = [
-  { id: "introduction", label: "Introduction" },
-  { id: "grounds", label: "Grounds for Divorce" },
-  { id: "services", label: "Our Services" },
+  { id: "introduction", label: "Divorce Law Overview" },
+  { id: "grounds", label: "Legal Grounds for Divorce" },
+  { id: "services", label: "Our Divorce & Family Law Services" },
   { id: "why-choose-us", label: "Why Choose Us" },
-  { id: "cta", label: "Get Started" },
-  { id: "quote", label: "Client Quote" },
+  { id: "cta", label: "Confidential Consultation" },
+  { id: "quote", label: "Client Experience" },
 ];
 
 export const groundsForDivorce = [
   {
-    icon: "⚖️",
-    title: "Mutual Consent",
-    desc: "When both spouses agree to dissolve the marriage, we facilitate a smooth, dignified process with minimal conflict.",
-  },
-  {
     icon: "💔",
-    title: "Cruelty & Domestic Abuse",
-    desc: "Physical or mental cruelty is a valid ground. We stand beside victims to ensure their safety and legal protection.",
-  },
-  {
-    icon: "🚫",
-    title: "Desertion",
-    desc: "If a spouse has abandoned the other for 2+ years without reasonable cause, desertion constitutes a valid ground.",
-  },
-  {
-    icon: "🏥",
-    title: "Mental Disorder",
-    desc: "Incurable mental illness or persistent psychiatric disorder may be cited as legal grounds under applicable law.",
+    title: "Cruelty (Mental & Physical)",
+    desc: "Divorce can be granted under the Hindu Marriage Act, 1955 where a spouse is subjected to physical abuse, mental harassment, false allegations, or emotional torture.",
   },
   {
     icon: "🔗",
     title: "Adultery",
-    desc: "Voluntary sexual intercourse outside the marriage is a recognized ground. We handle such matters with complete discretion.",
+    desc: "Voluntary physical relationship outside marriage is a recognized legal ground for divorce under Indian matrimonial law.",
   },
   {
-    icon: "☮️",
-    title: "Irretrievable Breakdown",
-    desc: "When the marriage has permanently collapsed with no possibility of reconciliation, the court may grant dissolution.",
+    icon: "🚫",
+    title: "Desertion",
+    desc: "If a spouse abandons the other for a continuous period of two years or more without reasonable cause, it constitutes desertion.",
+  },
+  {
+    icon: "⚠️",
+    title: "Domestic Violence",
+    desc: "Unsafe marital environment, threats, coercion, or violence can justify legal separation and divorce proceedings.",
+  },
+  {
+    icon: "🧠",
+    title: "Mental Disorder",
+    desc: "Serious or incurable mental illness making marital life unsustainable is a valid ground for divorce.",
+  },
+  {
+    icon: "🤝",
+    title: "Mutual Consent Divorce",
+    desc: "Where both spouses agree to dissolve the marriage amicably, divorce by mutual consent offers a respectful and structured legal solution (cooling period subject to court discretion).",
   },
 ];
 
 export const services = [
   {
-    title: "Contested Divorce",
-    desc: "We aggressively represent your interests when both parties cannot reach agreement on terms of separation.",
-    icon: "🏛️",
+    title: "Contested Divorce Filing",
+    desc: "Strong legal representation in fully contested divorce cases before Family Court and District Court.",
+    icon: "⚖️",
   },
   {
-    title: "Uncontested Divorce",
-    desc: "Streamlined legal assistance for amicable separations, reducing time, cost, and emotional toll.",
+    title: "Mutual Consent Divorce",
+    desc: "Complete assistance in drafting joint petitions, settlement terms, and court representation for smooth separation.",
     icon: "🤝",
   },
   {
-    title: "Child Custody & Support",
-    desc: "Protecting your children's best interests with compassionate, firm legal advocacy at every step.",
-    icon: "👨‍👧",
-  },
-  {
-    title: "Alimony & Maintenance",
-    desc: "Expert guidance on spousal support claims, ensuring fair financial arrangements post-separation.",
+    title: "Maintenance & Alimony Claims",
+    desc: "Legal support for interim maintenance (Section 24 HMA) and permanent alimony (Section 25 HMA), including husband maintenance claims where legally applicable.",
     icon: "💼",
   },
   {
-    title: "Property Division",
-    desc: "Meticulous analysis and representation in dividing marital assets, property, and liabilities equitably.",
-    icon: "🏠",
+    title: "Husband Maintenance Rights",
+    desc: "In appropriate cases under Hindu Marriage Act, financially dependent husbands may claim interim maintenance and litigation expenses from earning wives.",
+    icon: "📜",
   },
   {
-    title: "Mediation & Arbitration",
-    desc: "Alternative dispute resolution services to resolve conflicts efficiently and out of court.",
-    icon: "🕊️",
+    title: "Child Custody & Visitation",
+    desc: "Protecting the best interests of the child through custody petitions, visitation rights, and guardianship matters.",
+    icon: "👨‍👧",
+  },
+  {
+    title: "498A & Domestic Violence Matters",
+    desc: "Legal representation in criminal matrimonial disputes, including filing or defending cases under relevant provisions.",
+    icon: "🏛️",
   },
 ];
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Experience",
-    desc: "Two decades of handling complex family law cases across all courts.",
+    title: "20+ Years of Family Law Experience",
+    desc: "Extensive courtroom experience handling complex divorce and matrimonial disputes.",
     icon: "🎖️",
   },
   {
-    title: "Client-First Approach",
-    desc: "Your well-being and outcome remain our unwavering priority throughout.",
-    icon: "🌟",
-  },
-  {
-    title: "Strict Confidentiality",
-    desc: "Every detail of your case is handled with the utmost discretion and privacy.",
+    title: "Sensitive & Confidential Handling",
+    desc: "We understand the emotional stress involved and ensure privacy, dignity, and respectful legal support.",
     icon: "🔒",
   },
   {
-    title: "Transparent Pricing",
-    desc: "No hidden charges. Clear, upfront fee structures discussed before engagement.",
+    title: "Strong Court Representation",
+    desc: "Well-prepared documentation, strategic arguments, and result-oriented advocacy.",
+    icon: "⚔️",
+  },
+  {
+    title: "Transparent & Fair Fees",
+    desc: "Clear fee structure with honest legal advice at every stage of the case.",
     icon: "💎",
   },
 ];
 
 export const stats = [
-  ["500+", "Cases Resolved"],
-  ["98%", "Client Satisfaction"],
-  ["20+", "Years of Practice"],
+  ["1000+", "Divorce & Matrimonial Cases Handled"],
+  ["95%", "Successful Settlements & Orders"],
+  ["20+", "Years of Legal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "Going through a divorce felt overwhelming, but Sharma & Associates handled my case with extraordinary professionalism and genuine compassion. They didn't just fight for my rights — they made sure I understood every step of the process. I walked away with my dignity and my children's future secured.",
-  name: "Priya Mehta",
-  detail: "Client, Mutual Consent Divorce — Mumbai, 2023",
-  initial: "P",
+    "My divorce case was emotionally overwhelming, but Sharma & Associates handled everything with professionalism and compassion. Their guidance on maintenance and custody protected my future and my child’s well-being.",
+  name: "Neha Verma",
+  detail: "Client, Divorce & Maintenance Matter — Gautam Buddh Nagar, 2024",
+  initial: "N",
 };

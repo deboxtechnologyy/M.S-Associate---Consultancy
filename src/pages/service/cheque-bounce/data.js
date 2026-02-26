@@ -1,111 +1,111 @@
 export const tableOfContents = [
-  { id: "introduction", label: "Introduction" },
-  { id: "grounds", label: "Grounds for Divorce" },
-  { id: "services", label: "Our Services" },
+  { id: "introduction", label: "Cheque Bounce Law Overview" },
+  { id: "grounds", label: "When Cheque Bounce Becomes an Offence" },
+  { id: "services", label: "Our NI Act 138 Services" },
   { id: "why-choose-us", label: "Why Choose Us" },
-  { id: "cta", label: "Get Started" },
-  { id: "quote", label: "Client Quote" },
+  { id: "cta", label: "Take Immediate Legal Action" },
+  { id: "quote", label: "Client Experience" },
 ];
 
 export const groundsForDivorce = [
   {
-    icon: "⚖️",
-    title: "Mutual Consent",
-    desc: "When both spouses agree to dissolve the marriage, we facilitate a smooth, dignified process with minimal conflict.",
-  },
-  {
-    icon: "💔",
-    title: "Cruelty & Domestic Abuse",
-    desc: "Physical or mental cruelty is a valid ground. We stand beside victims to ensure their safety and legal protection.",
+    icon: "🏦",
+    title: "Insufficient Funds",
+    desc: "Cheque dishonoured due to insufficient balance in the drawer’s bank account constitutes an offence under Section 138 of the Negotiable Instruments Act, 1881.",
   },
   {
     icon: "🚫",
-    title: "Desertion",
-    desc: "If a spouse has abandoned the other for 2+ years without reasonable cause, desertion constitutes a valid ground.",
+    title: "Account Closed",
+    desc: "If the cheque is returned with remarks such as 'Account Closed', it attracts criminal liability under NI Act 138.",
   },
   {
-    icon: "🏥",
-    title: "Mental Disorder",
-    desc: "Incurable mental illness or persistent psychiatric disorder may be cited as legal grounds under applicable law.",
+    icon: "⛔",
+    title: "Payment Stopped by Drawer",
+    desc: "Stopping payment after issuing a cheque may still amount to cheque dishonour and can lead to prosecution.",
   },
   {
-    icon: "🔗",
-    title: "Adultery",
-    desc: "Voluntary sexual intercourse outside the marriage is a recognized ground. We handle such matters with complete discretion.",
+    icon: "📄",
+    title: "Failure to Pay Within 15 Days",
+    desc: "If the drawer fails to make payment within 15 days of receiving legal notice, a criminal complaint can be filed in court.",
   },
   {
-    icon: "☮️",
-    title: "Irretrievable Breakdown",
-    desc: "When the marriage has permanently collapsed with no possibility of reconciliation, the court may grant dissolution.",
+    icon: "⏳",
+    title: "Legal Notice Within 30 Days",
+    desc: "Issuing a legal demand notice within 30 days from cheque return memo is mandatory to initiate proceedings.",
+  },
+  {
+    icon: "⚖️",
+    title: "Legally Enforceable Debt",
+    desc: "The cheque must have been issued towards repayment of a legally enforceable debt or liability.",
   },
 ];
 
 export const services = [
   {
-    title: "Contested Divorce",
-    desc: "We aggressively represent your interests when both parties cannot reach agreement on terms of separation.",
+    title: "Legal Notice Drafting",
+    desc: "Quick and legally strong demand notice drafting within the statutory 30-day period under NI Act 138.",
+    icon: "📜",
+  },
+  {
+    title: "Cheque Bounce Complaint Filing",
+    desc: "Complete assistance in filing criminal complaints before the competent Magistrate Court.",
     icon: "🏛️",
   },
   {
-    title: "Uncontested Divorce",
-    desc: "Streamlined legal assistance for amicable separations, reducing time, cost, and emotional toll.",
+    title: "Court Representation",
+    desc: "Professional courtroom representation ensuring strong arguments and effective prosecution.",
+    icon: "⚖️",
+  },
+  {
+    title: "Recovery with Compensation",
+    desc: "Assistance in recovering cheque amount along with interest, fine, and compensation.",
+    icon: "💰",
+  },
+  {
+    title: "Settlement & Compromise",
+    desc: "Negotiation and settlement support for speedy resolution of cheque dishonour disputes.",
     icon: "🤝",
   },
   {
-    title: "Child Custody & Support",
-    desc: "Protecting your children's best interests with compassionate, firm legal advocacy at every step.",
-    icon: "👨‍👧",
-  },
-  {
-    title: "Alimony & Maintenance",
-    desc: "Expert guidance on spousal support claims, ensuring fair financial arrangements post-separation.",
-    icon: "💼",
-  },
-  {
-    title: "Property Division",
-    desc: "Meticulous analysis and representation in dividing marital assets, property, and liabilities equitably.",
-    icon: "🏠",
-  },
-  {
-    title: "Mediation & Arbitration",
-    desc: "Alternative dispute resolution services to resolve conflicts efficiently and out of court.",
-    icon: "🕊️",
+    title: "Execution of Court Orders",
+    desc: "Legal follow-up and execution proceedings after favourable judgment.",
+    icon: "📂",
   },
 ];
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Experience",
-    desc: "Two decades of handling complex family law cases across all courts.",
+    title: "Experienced NI Act 138 Advocate",
+    desc: "Extensive experience in handling cheque bounce and cheque dishonour cases before District Courts.",
     icon: "🎖️",
   },
   {
-    title: "Client-First Approach",
-    desc: "Your well-being and outcome remain our unwavering priority throughout.",
-    icon: "🌟",
+    title: "Fast Legal Action",
+    desc: "Immediate drafting of legal notice and quick filing to protect your limitation period.",
+    icon: "🚀",
   },
   {
-    title: "Strict Confidentiality",
-    desc: "Every detail of your case is handled with the utmost discretion and privacy.",
+    title: "Strong Litigation Strategy",
+    desc: "Well-prepared documentation and strategic courtroom representation.",
+    icon: "📊",
+  },
+  {
+    title: "Transparent & Professional Fees",
+    desc: "Clear fee structure with confidential and result-oriented legal service.",
     icon: "🔒",
-  },
-  {
-    title: "Transparent Pricing",
-    desc: "No hidden charges. Clear, upfront fee structures discussed before engagement.",
-    icon: "💎",
   },
 ];
 
 export const stats = [
-  ["500+", "Cases Resolved"],
-  ["98%", "Client Satisfaction"],
-  ["20+", "Years of Practice"],
+  ["1000+", "Cheque Bounce Notices Sent"],
+  ["92%", "Successful Recovery Rate"],
+  ["20+", "Years of Legal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "Going through a divorce felt overwhelming, but Sharma & Associates handled my case with extraordinary professionalism and genuine compassion. They didn't just fight for my rights — they made sure I understood every step of the process. I walked away with my dignity and my children's future secured.",
-  name: "Priya Mehta",
-  detail: "Client, Mutual Consent Divorce — Mumbai, 2023",
-  initial: "P",
+    "After my cheque was dishonoured, I was unsure how to recover my money. Sharma & Associates immediately sent a legal notice and handled the court case professionally. I successfully recovered my amount with compensation.",
+  name: "Amit Khanna",
+  detail: "Client, NI Act 138 Case — Gautam Buddh Nagar, 2024",
+  initial: "A",
 };

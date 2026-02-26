@@ -1,111 +1,111 @@
 export const tableOfContents = [
-  { id: "introduction", label: "Introduction" },
-  { id: "grounds", label: "Grounds for Divorce" },
-  { id: "services", label: "Our Services" },
+  { id: "introduction", label: "Civil Suit Law Overview" },
+  { id: "grounds", label: "Types of Civil Suits" },
+  { id: "services", label: "Our Civil Litigation Services" },
   { id: "why-choose-us", label: "Why Choose Us" },
-  { id: "cta", label: "Get Started" },
-  { id: "quote", label: "Client Quote" },
+  { id: "cta", label: "File Your Civil Case Today" },
+  { id: "quote", label: "Client Experience" },
 ];
 
 export const groundsForDivorce = [
   {
-    icon: "⚖️",
-    title: "Mutual Consent",
-    desc: "When both spouses agree to dissolve the marriage, we facilitate a smooth, dignified process with minimal conflict.",
+    icon: "🏠",
+    title: "Property Disputes",
+    desc: "Legal representation in property ownership disputes, partition suits, injunction matters, possession claims, and title declaration cases.",
   },
   {
-    icon: "💔",
-    title: "Cruelty & Domestic Abuse",
-    desc: "Physical or mental cruelty is a valid ground. We stand beside victims to ensure their safety and legal protection.",
+    icon: "📜",
+    title: "Recovery Suits",
+    desc: "Filing and contesting civil suits for recovery of money, outstanding dues, contractual payments, and damages.",
   },
   {
-    icon: "🚫",
-    title: "Desertion",
-    desc: "If a spouse has abandoned the other for 2+ years without reasonable cause, desertion constitutes a valid ground.",
+    icon: "✍️",
+    title: "Breach of Contract",
+    desc: "Civil action in cases involving violation of contractual terms, non-performance, or financial loss due to breach.",
   },
   {
-    icon: "🏥",
-    title: "Mental Disorder",
-    desc: "Incurable mental illness or persistent psychiatric disorder may be cited as legal grounds under applicable law.",
+    icon: "🚧",
+    title: "Permanent & Temporary Injunction",
+    desc: "Obtaining urgent court orders to restrain illegal construction, interference in property, or unlawful acts.",
   },
   {
-    icon: "🔗",
-    title: "Adultery",
-    desc: "Voluntary sexual intercourse outside the marriage is a recognized ground. We handle such matters with complete discretion.",
+    icon: "👨‍👩‍👧",
+    title: "Partition & Family Property Suits",
+    desc: "Legal assistance in ancestral property disputes and partition suits among family members.",
   },
   {
-    icon: "☮️",
-    title: "Irretrievable Breakdown",
-    desc: "When the marriage has permanently collapsed with no possibility of reconciliation, the court may grant dissolution.",
+    icon: "📄",
+    title: "Declaration Suits",
+    desc: "Court proceedings for declaration of legal rights, ownership status, or cancellation of fraudulent documents.",
   },
 ];
 
 export const services = [
   {
-    title: "Contested Divorce",
-    desc: "We aggressively represent your interests when both parties cannot reach agreement on terms of separation.",
+    title: "Civil Suit Drafting & Filing",
+    desc: "Professional drafting of plaints, written statements, affidavits, and civil applications under the Code of Civil Procedure (CPC).",
+    icon: "🖋️",
+  },
+  {
+    title: "Court Representation",
+    desc: "Strong representation before Civil Judge, District Court, and Appellate Courts in complex civil litigation matters.",
+    icon: "⚖️",
+  },
+  {
+    title: "Injunction & Stay Orders",
+    desc: "Urgent filing for temporary injunctions and stay orders to protect your rights and property.",
+    icon: "⏳",
+  },
+  {
+    title: "Execution Proceedings",
+    desc: "Effective execution of civil court decrees to ensure enforcement of favorable judgments.",
+    icon: "📂",
+  },
+  {
+    title: "Appeals & Revisions",
+    desc: "Filing civil appeals and revisions against adverse judgments before higher courts.",
     icon: "🏛️",
   },
   {
-    title: "Uncontested Divorce",
-    desc: "Streamlined legal assistance for amicable separations, reducing time, cost, and emotional toll.",
-    icon: "🤝",
-  },
-  {
-    title: "Child Custody & Support",
-    desc: "Protecting your children's best interests with compassionate, firm legal advocacy at every step.",
-    icon: "👨‍👧",
-  },
-  {
-    title: "Alimony & Maintenance",
-    desc: "Expert guidance on spousal support claims, ensuring fair financial arrangements post-separation.",
-    icon: "💼",
-  },
-  {
-    title: "Property Division",
-    desc: "Meticulous analysis and representation in dividing marital assets, property, and liabilities equitably.",
-    icon: "🏠",
-  },
-  {
-    title: "Mediation & Arbitration",
-    desc: "Alternative dispute resolution services to resolve conflicts efficiently and out of court.",
-    icon: "🕊️",
+    title: "Legal Notice & Pre-Litigation Strategy",
+    desc: "Strategic legal notices and dispute resolution planning before initiating formal civil proceedings.",
+    icon: "📨",
   },
 ];
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Experience",
-    desc: "Two decades of handling complex family law cases across all courts.",
+    title: "20+ Years of Civil Litigation Experience",
+    desc: "Extensive courtroom experience in handling complex civil suits across District Courts and High Courts.",
     icon: "🎖️",
   },
   {
-    title: "Client-First Approach",
-    desc: "Your well-being and outcome remain our unwavering priority throughout.",
-    icon: "🌟",
+    title: "Strategic Case Planning",
+    desc: "Detailed case analysis, documentation review, and structured litigation strategy for maximum success.",
+    icon: "📊",
   },
   {
-    title: "Strict Confidentiality",
-    desc: "Every detail of your case is handled with the utmost discretion and privacy.",
+    title: "Transparent & Ethical Practice",
+    desc: "Clear fee structure, honest advice, and professional integrity in every civil matter.",
     icon: "🔒",
   },
   {
-    title: "Transparent Pricing",
-    desc: "No hidden charges. Clear, upfront fee structures discussed before engagement.",
-    icon: "💎",
+    title: "Result-Oriented Representation",
+    desc: "Focused approach aimed at securing injunctions, decrees, and favorable settlements efficiently.",
+    icon: "🏆",
   },
 ];
 
 export const stats = [
-  ["500+", "Cases Resolved"],
-  ["98%", "Client Satisfaction"],
-  ["20+", "Years of Practice"],
+  ["1200+", "Civil Cases Handled"],
+  ["90%", "Successful Decrees & Settlements"],
+  ["20+", "Years of Court Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "Going through a divorce felt overwhelming, but Sharma & Associates handled my case with extraordinary professionalism and genuine compassion. They didn't just fight for my rights — they made sure I understood every step of the process. I walked away with my dignity and my children's future secured.",
-  name: "Priya Mehta",
-  detail: "Client, Mutual Consent Divorce — Mumbai, 2023",
-  initial: "P",
+    "I was facing a serious property dispute within my family. Sharma & Associates handled my civil suit with professionalism and strong legal arguments. The court granted injunction in my favor, protecting my property rights.",
+  name: "Rajesh Singh",
+  detail: "Client, Property Civil Suit — Gautam Buddh Nagar, 2024",
+  initial: "R",
 };

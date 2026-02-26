@@ -80,8 +80,17 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative flex flex-col items-start p-8 rounded-2xl cursor-default overflow-hidden"
       style={{
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        padding: "clamp(20px, 4vw, 32px)",
+        borderRadius: "16px",
+        cursor: "default",
+        overflow: "hidden",
+        boxSizing: "border-box",
+        width: "100%",
         background: hovered ? "#172e4e" : "#fff",
         border: `1px solid ${hovered ? "#172e4e" : "rgba(23,46,78,0.1)"}`,
         boxShadow: hovered
@@ -92,12 +101,18 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
         transition: `opacity 0.6s ${index * 0.12}s ease, transform 0.6s ${index * 0.12}s ease, background 0.4s, border-color 0.4s, box-shadow 0.4s`,
       }}
     >
-      {/* Big ghost number */}
+      {/* Ghost number */}
       <div
-        className="cormorant absolute -bottom-4 -right-2 font-bold leading-none select-none pointer-events-none"
         style={{
           fontFamily: "'Cormorant Garamond', Georgia, serif",
-          fontSize: "8rem",
+          fontSize: "clamp(5rem, 10vw, 8rem)",
+          fontWeight: 700,
+          lineHeight: 1,
+          userSelect: "none",
+          pointerEvents: "none",
+          position: "absolute",
+          bottom: "-8px",
+          right: "-4px",
           color: hovered ? "rgba(211,159,23,0.12)" : "rgba(23,46,78,0.04)",
           letterSpacing: "-0.04em",
           transition: "color 0.4s",
@@ -108,8 +123,15 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
 
       {/* Icon */}
       <div
-        className="flex items-center justify-center w-12 h-12 rounded-xl mb-6"
         style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "48px",
+          height: "48px",
+          borderRadius: "12px",
+          marginBottom: "24px",
+          flexShrink: 0,
           background: hovered ? "rgba(211,159,23,0.15)" : "rgba(23,46,78,0.05)",
           color: hovered ? "#d39f17" : "#172e4e",
           transition: "background 0.4s, color 0.4s",
@@ -120,12 +142,15 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
 
       {/* Number */}
       <div
-        className="cormorant leading-none mb-3 relative z-10"
         style={{
           fontFamily: "'Cormorant Garamond', Georgia, serif",
-          fontSize: "clamp(3rem, 5vw, 4rem)",
+          fontSize: "clamp(2.8rem, 5vw, 4rem)",
           fontWeight: 700,
           letterSpacing: "-0.02em",
+          lineHeight: 1,
+          marginBottom: "12px",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <span style={{ color: hovered ? "#fff" : "#172e4e", transition: "color 0.4s" }}>
@@ -136,22 +161,28 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
 
       {/* Divider */}
       <div
-        className="rounded-full mb-3"
         style={{
           width: hovered ? "48px" : "32px",
           height: "2px",
           background: "#d39f17",
+          borderRadius: "9999px",
+          marginBottom: "12px",
           transition: "width 0.4s ease",
         }}
       />
 
       {/* Label */}
       <div
-        className="text-sm font-semibold tracking-widest uppercase mb-2 relative z-10"
         style={{
           fontFamily: "'Jost', 'Segoe UI', sans-serif",
-          color: hovered ? "#fff" : "#172e4e",
+          fontSize: "0.7rem",
+          fontWeight: 600,
           letterSpacing: "0.15em",
+          textTransform: "uppercase",
+          color: hovered ? "#fff" : "#172e4e",
+          marginBottom: "8px",
+          position: "relative",
+          zIndex: 1,
           transition: "color 0.4s",
         }}
       >
@@ -160,11 +191,14 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
 
       {/* Desc */}
       <div
-        className="text-xs leading-relaxed relative z-10"
         style={{
           fontFamily: "'Jost', 'Segoe UI', sans-serif",
-          color: hovered ? "rgba(255,255,255,0.55)" : "#8a97a8",
+          fontSize: "0.8rem",
+          lineHeight: 1.6,
           fontWeight: 300,
+          color: hovered ? "rgba(255,255,255,0.55)" : "#8a97a8",
+          position: "relative",
+          zIndex: 1,
           transition: "color 0.4s",
         }}
       >
@@ -174,6 +208,95 @@ function StatCard({ value, suffix, label, desc, icon, visible, index }) {
   );
 }
 
+const responsiveStyles = `
+  *, *::before, *::after { box-sizing: border-box; }
+
+  .stats-section {
+    position: relative;
+    overflow: hidden;
+    padding: 112px 5%;
+    background: #f6f4f0;
+  }
+
+  .stats-inner {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+  }
+
+  .stats-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 64px;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .stats-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stats-tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border-radius: 9999px;
+    border: 1px solid rgba(23,46,78,0.1);
+    background: #fff;
+    white-space: nowrap;
+  }
+
+  .stats-divider {
+    height: 1px;
+    background: linear-gradient(to right, rgba(23,46,78,0.12), rgba(211,159,23,0.3), rgba(23,46,78,0.12));
+    border-radius: 9999px;
+    margin-bottom: 48px;
+    opacity: 0;
+    transition: opacity 0.7s 0.2s ease;
+  }
+  .stats-divider.visible { opacity: 1; }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  /* ── Large tablets (≤1024px) ── */
+  @media (max-width: 1024px) {
+    .stats-section { padding: 90px 5%; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  }
+
+  /* ── Tablets portrait (≤768px) ── */
+  @media (max-width: 768px) {
+    .stats-section { padding: 72px 6%; }
+    .stats-header { gap: 16px; margin-bottom: 48px; }
+    .stats-tag { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .stats-divider { margin-bottom: 36px; }
+  }
+
+  /* ── Large phones (≤560px) ── */
+  @media (max-width: 560px) {
+    .stats-section { padding: 56px 5%; }
+    .stats-header { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  }
+
+  /* ── Small phones (≤400px) ── */
+  @media (max-width: 400px) {
+    .stats-section { padding: 44px 4%; }
+    .stats-grid { grid-template-columns: 1fr; gap: 12px; }
+  }
+`;
+
 export default function StatsSection() {
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
@@ -181,115 +304,115 @@ export default function StatsSection() {
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) setVisible(true); },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);
 
   return (
-    <section
-      ref={ref}
-      className="relative overflow-hidden py-28 px-[5%]"
-      style={{ background: "#f6f4f0" }}
-    >
-      {/* Dot grid */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(rgba(23,46,78,0.06) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-      />
+    <>
+      <style>{responsiveStyles}</style>
+      <section ref={ref} className="stats-section">
 
-      {/* Gold orb */}
-      <div
-        className="absolute rounded-full pointer-events-none"
-        style={{
-          top: "-100px", left: "-80px",
-          width: "400px", height: "400px",
-          background: "radial-gradient(circle, rgba(211,159,23,0.08) 0%, transparent 70%)",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto" style={{ maxWidth: "80rem" }}>
-
-        {/* Header */}
+        {/* Dot grid */}
         <div
-          className="mb-16 grid gap-6"
           style={{
-            gridTemplateColumns: "1fr auto",
-            alignItems: "end",
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(24px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
-          }}
-        >
-          {/* Left */}
-          <div>
-            <p
-              className="text-xs font-medium tracking-[0.26em] uppercase mb-3"
-              style={{ fontFamily: "'Jost', sans-serif", color: "#d39f17" }}
-            >
-              Our Track Record
-            </p>
-            <h2
-              className="leading-tight m-0"
-              style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
-                fontWeight: 300,
-                color: "#172e4e",
-              }}
-            >
-              Numbers That{" "}
-              <em style={{ fontStyle: "italic", color: "#d39f17" }}>Speak</em>
-            </h2>
-          </div>
-
-          {/* Right — decorative tag */}
-          <div
-            className="hidden md:flex items-center gap-3 px-5 py-3 rounded-full"
-            style={{ border: "1px solid rgba(23,46,78,0.1)", background: "#fff" }}
-          >
-            <div className="w-2 h-2 rounded-full" style={{ background: "#d39f17" }} />
-            <span
-              className="text-xs font-medium tracking-widest uppercase"
-              style={{ fontFamily: "'Jost', sans-serif", color: "#172e4e" }}
-            >
-              Since 1999
-            </span>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div
-          className="mb-12 rounded-full"
-          style={{
-            height: "1px",
-            background: "linear-gradient(to right, rgba(23,46,78,0.12), rgba(211,159,23,0.3), rgba(23,46,78,0.12))",
-            opacity: visible ? 1 : 0,
-            transition: "opacity 0.7s 0.2s ease",
+            position: "absolute",
+            inset: 0,
+            pointerEvents: "none",
+            backgroundImage: "radial-gradient(rgba(23,46,78,0.06) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
           }}
         />
 
-        {/* Cards grid */}
-        <div className="grid gap-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))" }}>
-          {STATS.map(({ value, suffix, label, desc, icon }, i) => (
-            <StatCard
-              key={label}
-              value={value}
-              suffix={suffix}
-              label={label}
-              desc={desc}
-              icon={icon}
-              visible={visible}
-              index={i}
-            />
-          ))}
-        </div>
+        {/* Gold orb */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-100px",
+            left: "-80px",
+            width: "400px",
+            height: "400px",
+            borderRadius: "9999px",
+            pointerEvents: "none",
+            background: "radial-gradient(circle, rgba(211,159,23,0.08) 0%, transparent 70%)",
+          }}
+        />
 
-      </div>
-    </section>
+        <div className="stats-inner">
+
+          {/* Header */}
+          <div className={`stats-header${visible ? " visible" : ""}`}>
+            <div>
+              <p
+                style={{
+                  fontFamily: "'Jost', sans-serif",
+                  fontSize: "0.7rem",
+                  fontWeight: 500,
+                  letterSpacing: "0.26em",
+                  textTransform: "uppercase",
+                  color: "#d39f17",
+                  marginBottom: "12px",
+                  margin: "0 0 12px",
+                }}
+              >
+                Our Track Record
+              </p>
+              <h2
+                style={{
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                  fontWeight: 300,
+                  color: "#172e4e",
+                  lineHeight: 1.2,
+                  margin: 0,
+                }}
+              >
+                Numbers That{" "}
+                <em style={{ fontStyle: "italic", color: "#d39f17" }}>Speak</em>
+              </h2>
+            </div>
+
+            {/* Decorative tag — hidden on mobile via CSS */}
+            <div className="stats-tag">
+              <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#d39f17", flexShrink: 0 }} />
+              <span
+                style={{
+                  fontFamily: "'Jost', sans-serif",
+                  fontSize: "0.7rem",
+                  fontWeight: 500,
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  color: "#172e4e",
+                }}
+              >
+                Since 1999
+              </span>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className={`stats-divider${visible ? " visible" : ""}`} />
+
+          {/* Cards */}
+          <div className="stats-grid">
+            {STATS.map(({ value, suffix, label, desc, icon }, i) => (
+              <StatCard
+                key={label}
+                value={value}
+                suffix={suffix}
+                label={label}
+                desc={desc}
+                icon={icon}
+                visible={visible}
+                index={i}
+              />
+            ))}
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 }

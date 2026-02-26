@@ -88,6 +88,14 @@ export default function ProcessSection() {
           pointer-events: none;
         }
 
+        /* ── Outer container — max-w-7xl (80rem / 1280px) ── */
+        .ps-container {
+          max-width: 80rem;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+        }
+
         /* ── Header ── */
         .ps-header {
           text-align: center;
@@ -146,15 +154,13 @@ export default function ProcessSection() {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 0;
-          max-width: 1160px;
-          margin: 0 auto;
         }
 
         /* The horizontal line behind dots */
         .ps-line {
           position: absolute;
           top: 44px;
-          left: calc(12.5% );
+          left: calc(12.5%);
           right: calc(12.5%);
           height: 1px;
           background: linear-gradient(
@@ -180,7 +186,7 @@ export default function ProcessSection() {
         }
 
         .ps-line-fill.visible {
-          width: calc(75%);
+          width: 75%;
         }
 
         /* ── Each step column ── */
@@ -188,7 +194,7 @@ export default function ProcessSection() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 0 20px;
+          padding: 0 16px;
           position: relative;
           z-index: 1;
           opacity: 0;
@@ -205,6 +211,7 @@ export default function ProcessSection() {
         .ps-dot-wrap {
           position: relative;
           margin-bottom: 36px;
+          flex-shrink: 0;
         }
 
         .ps-dot {
@@ -264,7 +271,7 @@ export default function ProcessSection() {
           background: #fff;
           border: 1px solid rgba(23,46,78,0.07);
           border-radius: 16px;
-          padding: 28px 24px;
+          padding: 28px 20px;
           text-align: center;
           width: 100%;
           transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s;
@@ -288,7 +295,7 @@ export default function ProcessSection() {
 
         .ps-card-title {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 1.25rem;
+          font-size: 1.2rem;
           font-weight: 600;
           color: #172e4e;
           margin: 0 0 10px;
@@ -316,24 +323,109 @@ export default function ProcessSection() {
           margin: 0;
         }
 
-        /* Mobile */
-        @media (max-width: 760px) {
-          .ps-timeline {
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        /* ── Tablet: 2-column grid ── */
+        @media (max-width: 900px) {
+          .ps-wrap {
+            padding: 80px 5% 100px;
           }
-          .ps-line, .ps-line-fill { display: none; }
-          .ps-step { padding: 0; }
-          .ps-dot { width: 72px; height: 72px; }
+
+          .ps-header {
+            margin-bottom: 60px;
+          }
+
+          .ps-timeline {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 24px;
+          }
+
+          /* Hide the horizontal line on 2-col layout */
+          .ps-line,
+          .ps-line-fill {
+            display: none;
+          }
+
+          .ps-step {
+            padding: 0;
+          }
+
+          .ps-dot {
+            width: 80px;
+            height: 80px;
+          }
         }
 
-        @media (max-width: 440px) {
-          .ps-timeline { grid-template-columns: 1fr; }
+        /* ── Small tablet / large phone ── */
+        @media (max-width: 600px) {
+          .ps-wrap {
+            padding: 64px 4% 80px;
+          }
+
+          .ps-header {
+            margin-bottom: 48px;
+          }
+
+          .ps-timeline {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px 16px;
+          }
+
+          .ps-dot {
+            width: 68px;
+            height: 68px;
+          }
+
+          .ps-card {
+            padding: 20px 14px;
+          }
+
+          .ps-card-title {
+            font-size: 1.05rem;
+          }
+
+          .ps-card-desc {
+            font-size: 0.76rem;
+          }
+
+          .ps-dot-wrap {
+            margin-bottom: 24px;
+          }
+        }
+
+        /* ── Mobile: single column ── */
+        @media (max-width: 400px) {
+          .ps-timeline {
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+
+          .ps-step {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+          }
+
+          .ps-dot-wrap {
+            margin-bottom: 0;
+            flex-shrink: 0;
+          }
+
+          .ps-dot {
+            width: 64px;
+            height: 64px;
+          }
+
+          .ps-card {
+            text-align: left;
+          }
+
+          .ps-card-rule {
+            margin: 0 0 12px 0;
+          }
         }
       `}</style>
 
       <section className="ps-wrap" id="process">
-        <div style={{ maxWidth: "1160px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div className="ps-container">
 
           {/* Header */}
           <div ref={headerRef} className={`ps-header${headerInView ? " visible" : ""}`}>

@@ -1,111 +1,111 @@
 export const tableOfContents = [
-  { id: "introduction", label: "Introduction" },
-  { id: "grounds", label: "Grounds for Divorce" },
-  { id: "services", label: "Our Services" },
+  { id: "introduction", label: "Bail Law Overview" },
+  { id: "grounds", label: "Strong Grounds for Bail" },
+  { id: "services", label: "Our Bail Services" },
   { id: "why-choose-us", label: "Why Choose Us" },
-  { id: "cta", label: "Get Started" },
-  { id: "quote", label: "Client Quote" },
+  { id: "cta", label: "Get Immediate Legal Help" },
+  { id: "quote", label: "Client Experience" },
 ];
 
 export const groundsForDivorce = [
   {
     icon: "⚖️",
-    title: "Mutual Consent",
-    desc: "When both spouses agree to dissolve the marriage, we facilitate a smooth, dignified process with minimal conflict.",
+    title: "False Implication",
+    desc: "If the accused has been falsely implicated in the FIR or criminal complaint, we build strong legal arguments to establish innocence and secure bail at the earliest stage.",
   },
   {
-    icon: "💔",
-    title: "Cruelty & Domestic Abuse",
-    desc: "Physical or mental cruelty is a valid ground. We stand beside victims to ensure their safety and legal protection.",
+    icon: "📄",
+    title: "Clean Criminal Record",
+    desc: "Courts consider absence of past criminal history as a strong ground. We highlight clean antecedents to strengthen the bail application.",
   },
   {
-    icon: "🚫",
-    title: "Desertion",
-    desc: "If a spouse has abandoned the other for 2+ years without reasonable cause, desertion constitutes a valid ground.",
+    icon: "🤝",
+    title: "Cooperation in Investigation",
+    desc: "Full cooperation with police investigation and willingness to comply with conditions significantly improves chances of bail approval.",
+  },
+  {
+    icon: "🏠",
+    title: "No Risk of Absconding",
+    desc: "Permanent residence, family ties, and stable employment demonstrate that the accused will not flee from justice.",
   },
   {
     icon: "🏥",
-    title: "Mental Disorder",
-    desc: "Incurable mental illness or persistent psychiatric disorder may be cited as legal grounds under applicable law.",
+    title: "Medical & Humanitarian Grounds",
+    desc: "Serious illness, old age, or urgent medical conditions are valid humanitarian grounds for seeking regular or interim bail.",
   },
   {
-    icon: "🔗",
-    title: "Adultery",
-    desc: "Voluntary sexual intercourse outside the marriage is a recognized ground. We handle such matters with complete discretion.",
-  },
-  {
-    icon: "☮️",
-    title: "Irretrievable Breakdown",
-    desc: "When the marriage has permanently collapsed with no possibility of reconciliation, the court may grant dissolution.",
+    icon: "⏳",
+    title: "Long Custody & Delay in Trial",
+    desc: "If trial is likely to take considerable time, prolonged judicial custody becomes unjustified and bail may be granted.",
   },
 ];
 
 export const services = [
   {
-    title: "Contested Divorce",
-    desc: "We aggressively represent your interests when both parties cannot reach agreement on terms of separation.",
+    title: "Regular Bail (Section 437/439 CrPC)",
+    desc: "Expert drafting and representation for regular bail applications before Magistrate and Sessions Courts.",
     icon: "🏛️",
   },
   {
-    title: "Uncontested Divorce",
-    desc: "Streamlined legal assistance for amicable separations, reducing time, cost, and emotional toll.",
-    icon: "🤝",
+    title: "Anticipatory Bail (Section 438 CrPC)",
+    desc: "Pre-arrest bail protection to safeguard your liberty in case of apprehended arrest.",
+    icon: "🛡️",
   },
   {
-    title: "Child Custody & Support",
-    desc: "Protecting your children's best interests with compassionate, firm legal advocacy at every step.",
-    icon: "👨‍👧",
+    title: "Interim Bail",
+    desc: "Immediate temporary relief from arrest or custody while the main bail application is pending.",
+    icon: "⏱️",
   },
   {
-    title: "Alimony & Maintenance",
-    desc: "Expert guidance on spousal support claims, ensuring fair financial arrangements post-separation.",
-    icon: "💼",
+    title: "Default Bail (Section 167(2) CrPC)",
+    desc: "Legal assistance in securing statutory bail when investigation is not completed within prescribed time limits.",
+    icon: "📜",
   },
   {
-    title: "Property Division",
-    desc: "Meticulous analysis and representation in dividing marital assets, property, and liabilities equitably.",
-    icon: "🏠",
+    title: "High Court Bail Matters",
+    desc: "Strong legal representation before the High Court in complex or rejected bail cases.",
+    icon: "⚖️",
   },
   {
-    title: "Mediation & Arbitration",
-    desc: "Alternative dispute resolution services to resolve conflicts efficiently and out of court.",
-    icon: "🕊️",
+    title: "Urgent Bail Filing & Strategy",
+    desc: "Same-day drafting, documentation assistance, and strategic legal advice for urgent arrest situations.",
+    icon: "🚨",
   },
 ];
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Experience",
-    desc: "Two decades of handling complex family law cases across all courts.",
+    title: "20+ Years of Criminal Law Experience",
+    desc: "Extensive courtroom experience in handling bail matters across District Courts and High Courts.",
     icon: "🎖️",
   },
   {
-    title: "Client-First Approach",
-    desc: "Your well-being and outcome remain our unwavering priority throughout.",
-    icon: "🌟",
+    title: "Emergency Legal Support",
+    desc: "Immediate response in arrest situations with quick drafting and filing of bail applications.",
+    icon: "📞",
   },
   {
-    title: "Strict Confidentiality",
-    desc: "Every detail of your case is handled with the utmost discretion and privacy.",
+    title: "Confidential & Strategic Approach",
+    desc: "Every bail case is handled with strict confidentiality and carefully planned legal strategy.",
     icon: "🔒",
   },
   {
-    title: "Transparent Pricing",
-    desc: "No hidden charges. Clear, upfront fee structures discussed before engagement.",
-    icon: "💎",
+    title: "Transparent & Fair Fees",
+    desc: "Clear fee structure with no hidden charges. Professional and ethical legal services assured.",
+    icon: "💼",
   },
 ];
 
 export const stats = [
-  ["500+", "Cases Resolved"],
-  ["98%", "Client Satisfaction"],
-  ["20+", "Years of Practice"],
+  ["800+", "Bail Applications Handled"],
+  ["95%", "Successful Bail Orders"],
+  ["20+", "Years of Criminal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "Going through a divorce felt overwhelming, but Sharma & Associates handled my case with extraordinary professionalism and genuine compassion. They didn't just fight for my rights — they made sure I understood every step of the process. I walked away with my dignity and my children's future secured.",
-  name: "Priya Mehta",
-  detail: "Client, Mutual Consent Divorce — Mumbai, 2023",
-  initial: "P",
+    "I was extremely stressed after the FIR was lodged against me, but Sharma & Associates acted immediately and secured my anticipatory bail. Their legal strategy, confidence, and courtroom arguments gave me immense relief.",
+  name: "Rohit Verma",
+  detail: "Client, Anticipatory Bail Matter — Gautam Buddh Nagar, 2024",
+  initial: "R",
 };

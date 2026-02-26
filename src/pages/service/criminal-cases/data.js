@@ -1,111 +1,111 @@
 export const tableOfContents = [
-  { id: "introduction", label: "Introduction" },
-  { id: "grounds", label: "Grounds for Divorce" },
-  { id: "services", label: "Our Services" },
-  { id: "why-choose-us", label: "Why Choose Us" },
-  { id: "cta", label: "Get Started" },
-  { id: "quote", label: "Client Quote" },
+  { id: "introduction", label: "Criminal Law Overview" },
+  { id: "grounds", label: "Types of Criminal Cases We Handle" },
+  { id: "services", label: "Our Criminal Defense Services" },
+  { id: "why-choose-us", label: "Why Choose Our Criminal Law Firm" },
+  { id: "cta", label: "Get Immediate Legal Assistance" },
+  { id: "quote", label: "Client Experience" },
 ];
 
 export const groundsForDivorce = [
   {
+    icon: "🚔",
+    title: "FIR & Police Investigation Matters",
+    desc: "Legal assistance immediately after FIR registration, including police investigation guidance and protection of your legal rights.",
+  },
+  {
     icon: "⚖️",
-    title: "Mutual Consent",
-    desc: "When both spouses agree to dissolve the marriage, we facilitate a smooth, dignified process with minimal conflict.",
+    title: "Bail Matters (Regular & Anticipatory)",
+    desc: "Expert representation in regular bail, anticipatory bail, and interim bail applications before Magistrate, Sessions Court, and High Court.",
   },
   {
-    icon: "💔",
-    title: "Cruelty & Domestic Abuse",
-    desc: "Physical or mental cruelty is a valid ground. We stand beside victims to ensure their safety and legal protection.",
+    icon: "👨‍👩‍👧",
+    title: "Domestic Violence & 498A Cases",
+    desc: "Strong defense and legal strategy in matrimonial criminal disputes, cruelty cases, and false implication matters.",
   },
   {
-    icon: "🚫",
-    title: "Desertion",
-    desc: "If a spouse has abandoned the other for 2+ years without reasonable cause, desertion constitutes a valid ground.",
+    icon: "💰",
+    title: "Cheque Bounce (NI Act 138)",
+    desc: "Complete legal support in cheque dishonour cases including notice drafting, complaint filing, and court representation.",
   },
   {
-    icon: "🏥",
-    title: "Mental Disorder",
-    desc: "Incurable mental illness or persistent psychiatric disorder may be cited as legal grounds under applicable law.",
+    icon: "🏠",
+    title: "Property & Criminal Breach of Trust",
+    desc: "Defense and prosecution in cheating, fraud, criminal breach of trust, and property-related criminal offences.",
   },
   {
-    icon: "🔗",
-    title: "Adultery",
-    desc: "Voluntary sexual intercourse outside the marriage is a recognized ground. We handle such matters with complete discretion.",
-  },
-  {
-    icon: "☮️",
-    title: "Irretrievable Breakdown",
-    desc: "When the marriage has permanently collapsed with no possibility of reconciliation, the court may grant dissolution.",
+    icon: "🚨",
+    title: "Serious Criminal Offences",
+    desc: "Professional defense in cases involving assault, theft, fraud, cybercrime, and other serious criminal charges under IPC.",
   },
 ];
 
 export const services = [
   {
-    title: "Contested Divorce",
-    desc: "We aggressively represent your interests when both parties cannot reach agreement on terms of separation.",
+    title: "Criminal Case Consultation & Strategy",
+    desc: "Detailed case analysis, evidence review, and legal strategy planning for strong criminal defense.",
+    icon: "📊",
+  },
+  {
+    title: "Bail Application Drafting & Filing",
+    desc: "Urgent drafting and filing of regular, anticipatory, and interim bail applications.",
+    icon: "📝",
+  },
+  {
+    title: "Trial Court Representation",
+    desc: "Aggressive and strategic courtroom representation before Magistrate and Sessions Courts.",
     icon: "🏛️",
   },
   {
-    title: "Uncontested Divorce",
-    desc: "Streamlined legal assistance for amicable separations, reducing time, cost, and emotional toll.",
+    title: "High Court Criminal Matters",
+    desc: "Filing of criminal appeals, revisions, quashing petitions, and bail matters before the High Court.",
+    icon: "⚖️",
+  },
+  {
+    title: "Cross-Examination & Evidence Handling",
+    desc: "Skilled cross-examination and effective presentation of defense evidence during criminal trials.",
+    icon: "🔍",
+  },
+  {
+    title: "Settlement & Compounding Assistance",
+    desc: "Legal guidance in settlement, compromise, and compounding of criminal cases wherever legally permissible.",
     icon: "🤝",
-  },
-  {
-    title: "Child Custody & Support",
-    desc: "Protecting your children's best interests with compassionate, firm legal advocacy at every step.",
-    icon: "👨‍👧",
-  },
-  {
-    title: "Alimony & Maintenance",
-    desc: "Expert guidance on spousal support claims, ensuring fair financial arrangements post-separation.",
-    icon: "💼",
-  },
-  {
-    title: "Property Division",
-    desc: "Meticulous analysis and representation in dividing marital assets, property, and liabilities equitably.",
-    icon: "🏠",
-  },
-  {
-    title: "Mediation & Arbitration",
-    desc: "Alternative dispute resolution services to resolve conflicts efficiently and out of court.",
-    icon: "🕊️",
   },
 ];
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Experience",
-    desc: "Two decades of handling complex family law cases across all courts.",
+    title: "20+ Years of Criminal Law Experience",
+    desc: "Extensive experience handling complex criminal litigation cases across District Courts and High Courts.",
     icon: "🎖️",
   },
   {
-    title: "Client-First Approach",
-    desc: "Your well-being and outcome remain our unwavering priority throughout.",
-    icon: "🌟",
+    title: "Strong Courtroom Advocacy",
+    desc: "Confident arguments, strategic defense planning, and result-oriented representation.",
+    icon: "⚔️",
   },
   {
-    title: "Strict Confidentiality",
-    desc: "Every detail of your case is handled with the utmost discretion and privacy.",
+    title: "Immediate Legal Support",
+    desc: "Quick response in arrest situations and urgent criminal matters.",
+    icon: "📞",
+  },
+  {
+    title: "Confidential & Professional Handling",
+    desc: "Complete privacy, transparent fees, and ethical legal practice.",
     icon: "🔒",
-  },
-  {
-    title: "Transparent Pricing",
-    desc: "No hidden charges. Clear, upfront fee structures discussed before engagement.",
-    icon: "💎",
   },
 ];
 
 export const stats = [
-  ["500+", "Cases Resolved"],
-  ["98%", "Client Satisfaction"],
-  ["20+", "Years of Practice"],
+  ["1500+", "Criminal Cases Handled"],
+  ["93%", "Successful Outcomes"],
+  ["20+", "Years of Criminal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "Going through a divorce felt overwhelming, but Sharma & Associates handled my case with extraordinary professionalism and genuine compassion. They didn't just fight for my rights — they made sure I understood every step of the process. I walked away with my dignity and my children's future secured.",
-  name: "Priya Mehta",
-  detail: "Client, Mutual Consent Divorce — Mumbai, 2023",
-  initial: "P",
+    "I was falsely implicated in a criminal case and was extremely stressed. Sharma & Associates provided immediate legal support, secured my bail, and handled the trial professionally. Their strong courtroom representation protected my rights.",
+  name: "Vikram Sharma",
+  detail: "Client, Criminal Defense Matter — Gautam Buddh Nagar, 2024",
+  initial: "V",
 };

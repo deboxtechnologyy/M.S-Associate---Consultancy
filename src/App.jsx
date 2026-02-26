@@ -56,12 +56,7 @@ function App() {
       </div>
     }/>
 
-    <Route path="/services" element={
-<div>
-  <Navbar/>
-  <DivorceServicePage/>
-</div>
-    }/>
+
 
     <Route path="/service/bail" element={
       <div>

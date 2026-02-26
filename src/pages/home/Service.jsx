@@ -1,16 +1,50 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SERVICES = [
-  { icon: "⚖️", title: "Civil Litigation",  desc: "Expert representation in civil disputes, property matters, and contractual conflicts with decades of courtroom experience.", num: "01" },
-  { icon: "🏛️", title: "Criminal Defense",  desc: "Vigorous defense strategies for all criminal charges, protecting your rights at every stage of the legal process.", num: "02" },
-  { icon: "🏠", title: "Property Law",       desc: "Comprehensive legal assistance for property transactions, disputes, title issues, and real estate matters.", num: "03" },
-  { icon: "👨‍👩‍👧", title: "Family Law",    desc: "Compassionate counsel for divorce, custody, matrimonial disputes, and family legal matters.", num: "04" },
-  { icon: "📋", title: "Contract Drafting",  desc: "Meticulous drafting and review of agreements to safeguard your business and personal interests.", num: "05" },
-  { icon: "🏢", title: "Corporate Law",      desc: "Strategic legal solutions for businesses, mergers, compliance, and corporate governance.", num: "06" },
+  {
+    icon: "⚖️",
+    title: "Civil Litigation ",
+    desc: "Representation in civil suits including recovery cases, injunction matters, partition suits, and contractual disputes before District Courts in Gautam Buddh Nagar.",
+    num: "01"
+  },
+  {
+    icon: "🏛️",
+    title: "Criminal Defense ",
+    desc: "Strong courtroom representation in criminal trials, FIR matters, complaint cases, and defense strategy at every stage of criminal proceedings.",
+    num: "02"
+  },
+  {
+    icon: "🔓",
+    title: "Bail Matters ",
+    desc: "Regular bail, anticipatory bail, and urgent bail applications handled with detailed legal preparation and timely court representation.",
+    num: "03"
+  },
+  {
+    icon: "👨‍👩‍👧",
+    title: "Divorce & Family Law ",
+    desc: "Legal assistance in divorce petitions, child custody, maintenance cases, and matrimonial disputes with complete confidentiality.",
+    num: "04"
+  },
+  {
+    icon: "🏠",
+    title: "Property Disputes ",
+    desc: "Legal solutions for land disputes, registry issues, builder-buyer conflicts, partition matters, and title verification cases.",
+    num: "05"
+  },
+  {
+    icon: "💳",
+    title: "Cheque Bounce – NI Act 138",
+    desc: "Complete legal support for cheque bounce cases under Section 138 of the Negotiable Instruments Act, including legal notice drafting and court representation.",
+    num: "06"
+  },
+
 ];
 
 const style = `
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; }
 
   .svc-section {
     padding: 120px 5%;
@@ -39,13 +73,14 @@ const style = `
   }
 
   .svc-inner {
-    max-width: 1400px;
+    max-width: 1280px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    width: 100%;
   }
 
-  /* ── Header ── */
+  /* Header */
   .svc-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,10 +89,6 @@ const style = `
     margin-bottom: 80px;
     padding-bottom: 60px;
     border-bottom: 1px solid rgba(23,46,78,0.1);
-  }
-
-  @media (max-width: 768px) {
-    .svc-header { grid-template-columns: 1fr; gap: 24px; }
   }
 
   .svc-eyebrow {
@@ -77,21 +108,19 @@ const style = `
     display: block;
     width: 30px; height: 1px;
     background: #d39f17;
+    flex-shrink: 0;
   }
 
   .svc-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
     font-weight: 600;
     color: #172e4e;
     line-height: 1.15;
     margin: 0;
     letter-spacing: -0.01em;
   }
-  .svc-title em {
-    font-style: italic;
-    color: #d39f17;
-  }
+  .svc-title em { font-style: italic; color: #d39f17; }
 
   .svc-subtitle {
     color: rgba(23,46,78,0.55);
@@ -114,12 +143,12 @@ const style = `
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    text-decoration: none;
     cursor: pointer;
     background: transparent;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
   }
   .svc-cta::before {
     content: '';
@@ -135,16 +164,13 @@ const style = `
   .svc-cta:hover { color: #0d1b2a; border-color: #d39f17; }
   .svc-cta span { position: relative; z-index: 1; }
 
-  /* ── Grid ── */
+  /* Grid */
   .svc-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: rgba(23,46,78,0.08);
   }
-
-  @media (max-width: 900px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px) { .svc-grid { grid-template-columns: 1fr; } }
 
   .svc-card {
     background: #ffffff;
@@ -153,8 +179,8 @@ const style = `
     overflow: hidden;
     cursor: default;
     transition: background 0.4s ease;
+    min-width: 0;
   }
-
   .svc-card::before {
     content: '';
     position: absolute;
@@ -163,7 +189,6 @@ const style = `
     opacity: 0;
     transition: opacity 0.4s ease;
   }
-
   .svc-card:hover { background: #fdfaf4; }
   .svc-card:hover::before { opacity: 1; }
 
@@ -229,14 +254,14 @@ const style = `
     transition: all 0.3s ease;
   }
   .svc-card:hover .svc-card-link { color: #d39f17; gap: 14px; }
-
   .svc-card-link svg {
     width: 14px; height: 14px;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
   }
   .svc-card:hover .svc-card-link svg { transform: translateX(4px); }
 
-  /* ── Footer band ── */
+  /* Footer band */
   .svc-footer-band {
     margin-top: 72px;
     padding: 40px 48px;
@@ -246,10 +271,6 @@ const style = `
     justify-content: space-between;
     gap: 24px;
     background: rgba(23,46,78,0.02);
-  }
-
-  @media (max-width: 640px) {
-    .svc-footer-band { flex-direction: column; text-align: center; padding: 32px 24px; }
   }
 
   .svc-footer-text {
@@ -273,6 +294,7 @@ const style = `
     border-radius: 50%;
     background: #d39f17;
     animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
   }
 
   @keyframes pulse {
@@ -286,6 +308,74 @@ const style = `
     color: #d39f17;
     font-weight: 600;
     letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  /* ─── RESPONSIVE BREAKPOINTS ─── */
+
+  /* Large tablets / small desktops (≤1024px) */
+  @media (max-width: 1024px) {
+    .svc-section { padding: 90px 5%; }
+    .svc-card { padding: 40px 32px; }
+    .svc-card-num { font-size: 3.8rem; }
+    .svc-footer-band { padding: 32px 36px; }
+    .svc-footer-text { font-size: 1.15rem; }
+    .svc-footer-phone { font-size: 1rem; }
+  }
+
+  /* Tablets — 2-column grid (≤900px) */
+  @media (max-width: 900px) {
+    .svc-grid { grid-template-columns: repeat(2, 1fr); }
+    .svc-header { gap: 40px; margin-bottom: 60px; padding-bottom: 48px; }
+  }
+
+  /* Tablets portrait — stack header (≤768px) */
+  @media (max-width: 768px) {
+    .svc-section { padding: 72px 6%; }
+    .svc-header {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin-bottom: 48px;
+      padding-bottom: 40px;
+    }
+    .svc-subtitle { max-width: 100%; }
+    .svc-title { font-size: clamp(2rem, 7vw, 2.8rem); }
+    .svc-card { padding: 36px 28px; }
+    .svc-card-num { font-size: 3.4rem; right: 20px; top: 18px; }
+    .svc-footer-band { padding: 28px 24px; gap: 20px; }
+    .svc-footer-text { font-size: 1.05rem; }
+  }
+
+  /* Large phones — stack footer (≤640px) */
+  @media (max-width: 640px) {
+    .svc-footer-band {
+      flex-direction: column;
+      text-align: center;
+      padding: 32px 24px;
+    }
+    .svc-footer-contact { justify-content: center; }
+  }
+
+  /* Small phones — single column (≤560px) */
+  @media (max-width: 560px) {
+    .svc-section { padding: 56px 5%; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .svc-card { padding: 32px 24px; }
+    .svc-card-num { font-size: 3rem; }
+    .svc-card-title { font-size: 1.3rem; }
+    .svc-header { gap: 22px; margin-bottom: 36px; padding-bottom: 32px; }
+    .svc-footer-band { margin-top: 48px; }
+    .svc-footer-text { font-size: 1rem; }
+    .svc-footer-phone { font-size: 0.95rem; }
+  }
+
+  /* Very small phones (≤380px) */
+  @media (max-width: 380px) {
+    .svc-section { padding: 44px 4%; }
+    .svc-title { font-size: 1.9rem; }
+    .svc-eyebrow { font-size: 0.65rem; }
+    .svc-cta { padding: 12px 20px; font-size: 0.7rem; }
+    .svc-card { padding: 28px 20px; }
   }
 `;
 
@@ -298,7 +388,7 @@ export default function ServicesSection() {
       <section className="svc-section" id="services">
         <div className="svc-inner">
 
-          {/* ── Header ── */}
+          {/* Header */}
           <div className="svc-header">
             <div>
               <p className="svc-eyebrow">Our Practice Areas</p>
@@ -311,14 +401,16 @@ export default function ServicesSection() {
                 Comprehensive legal solutions tailored to your unique circumstances,
                 delivered with precision and unwavering dedication to your interests.
               </p>
+              <Link to="/contact">
               <button className="svc-cta">
                 <span>Schedule a Consultation</span>
                 <span>→</span>
               </button>
+              </Link>
             </div>
           </div>
 
-          {/* ── Cards Grid ── */}
+          {/* Cards Grid */}
           <div className="svc-grid">
             {SERVICES.map(({ icon, title, desc, num }) => (
               <div
@@ -332,17 +424,15 @@ export default function ServicesSection() {
                 <div className="svc-card-line" />
                 <h3 className="svc-card-title">{title}</h3>
                 <p className="svc-card-desc">{desc}</p>
-                <span className="svc-card-link">
-                  Learn More
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
+                <div>
+                
+           
+                </div>
               </div>
             ))}
           </div>
 
-          {/* ── Footer Band ── */}
+          {/* Footer Band */}
           <div className="svc-footer-band">
             <p className="svc-footer-text">
               "Every client deserves exceptional counsel — not just competent representation."

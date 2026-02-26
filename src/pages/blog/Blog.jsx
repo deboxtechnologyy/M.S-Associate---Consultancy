@@ -21,7 +21,7 @@ const Blog = () => {
       {/* Banner Section */}
       <div className="relative h-126  overflow-hidden">
         <img
-          src="https://images.pexels.com/photos/6077520/pexels-photo-6077520.jpeg"
+          src="https://images.pexels.com/photos/6077091/pexels-photo-6077091.jpeg"
           alt="Law related image"
           className="w-full h-full object-cover"
         />

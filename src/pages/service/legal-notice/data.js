@@ -1,111 +1,111 @@
 export const tableOfContents = [
-  { id: "introduction", label: "Introduction" },
-  { id: "grounds", label: "Grounds for Divorce" },
-  { id: "services", label: "Our Services" },
+  { id: "introduction", label: "Legal Notice Overview" },
+  { id: "grounds", label: "When to Send a Legal Notice" },
+  { id: "services", label: "Our Legal Notice Services" },
   { id: "why-choose-us", label: "Why Choose Us" },
-  { id: "cta", label: "Get Started" },
-  { id: "quote", label: "Client Quote" },
+  { id: "cta", label: "Send Legal Notice Today" },
+  { id: "quote", label: "Client Experience" },
 ];
 
 export const groundsForDivorce = [
   {
-    icon: "⚖️",
-    title: "Mutual Consent",
-    desc: "When both spouses agree to dissolve the marriage, we facilitate a smooth, dignified process with minimal conflict.",
+    icon: "💰",
+    title: "Money Recovery / Outstanding Dues",
+    desc: "Send a strong legal notice for recovery of pending payments, business dues, friendly loans, or unpaid invoices before initiating court proceedings.",
   },
   {
-    icon: "💔",
-    title: "Cruelty & Domestic Abuse",
-    desc: "Physical or mental cruelty is a valid ground. We stand beside victims to ensure their safety and legal protection.",
+    icon: "🏦",
+    title: "Cheque Bounce (NI Act 138)",
+    desc: "Mandatory legal demand notice within 30 days of cheque dishonour under Negotiable Instruments Act before filing a criminal complaint.",
   },
   {
-    icon: "🚫",
-    title: "Desertion",
-    desc: "If a spouse has abandoned the other for 2+ years without reasonable cause, desertion constitutes a valid ground.",
+    icon: "🏠",
+    title: "Property & Tenant Disputes",
+    desc: "Legal notice for eviction, rent default, illegal possession, or property-related disputes.",
   },
   {
-    icon: "🏥",
-    title: "Mental Disorder",
-    desc: "Incurable mental illness or persistent psychiatric disorder may be cited as legal grounds under applicable law.",
+    icon: "📄",
+    title: "Breach of Contract",
+    desc: "Notice for violation of contractual terms, non-performance, delay in services, or financial losses.",
   },
   {
-    icon: "🔗",
-    title: "Adultery",
-    desc: "Voluntary sexual intercourse outside the marriage is a recognized ground. We handle such matters with complete discretion.",
+    icon: "💼",
+    title: "Employment & Salary Disputes",
+    desc: "Legal notice for unpaid salary, wrongful termination, employment bond disputes, or workplace harassment.",
   },
   {
-    icon: "☮️",
-    title: "Irretrievable Breakdown",
-    desc: "When the marriage has permanently collapsed with no possibility of reconciliation, the court may grant dissolution.",
+    icon: "👨‍👩‍👧",
+    title: "Family & Matrimonial Matters",
+    desc: "Notice related to maintenance claims, restitution of conjugal rights, divorce intention, or domestic disputes.",
   },
 ];
 
 export const services = [
   {
-    title: "Contested Divorce",
-    desc: "We aggressively represent your interests when both parties cannot reach agreement on terms of separation.",
+    title: "Professional Legal Notice Drafting",
+    desc: "Well-drafted, legally strong and strategically worded notices prepared by experienced advocate.",
+    icon: "🖋️",
+  },
+  {
+    title: "Cheque Bounce Legal Notice",
+    desc: "Time-bound notice under NI Act 138 ensuring compliance with statutory requirements.",
     icon: "🏛️",
   },
   {
-    title: "Uncontested Divorce",
-    desc: "Streamlined legal assistance for amicable separations, reducing time, cost, and emotional toll.",
-    icon: "🤝",
+    title: "Reply to Legal Notice",
+    desc: "Carefully drafted legal reply protecting your rights and preventing unnecessary litigation.",
+    icon: "📩",
   },
   {
-    title: "Child Custody & Support",
-    desc: "Protecting your children's best interests with compassionate, firm legal advocacy at every step.",
-    icon: "👨‍👧",
+    title: "Pre-Litigation Strategy Consultation",
+    desc: "Legal advice before filing suit to explore settlement and avoid lengthy court battles.",
+    icon: "⚖️",
   },
   {
-    title: "Alimony & Maintenance",
-    desc: "Expert guidance on spousal support claims, ensuring fair financial arrangements post-separation.",
-    icon: "💼",
+    title: "Online & Offline Notice Assistance",
+    desc: "Legal notice drafting and dispatch assistance across India with proper documentation.",
+    icon: "🌐",
   },
   {
-    title: "Property Division",
-    desc: "Meticulous analysis and representation in dividing marital assets, property, and liabilities equitably.",
-    icon: "🏠",
-  },
-  {
-    title: "Mediation & Arbitration",
-    desc: "Alternative dispute resolution services to resolve conflicts efficiently and out of court.",
-    icon: "🕊️",
+    title: "Follow-up & Case Filing Support",
+    desc: "If the notice is ignored, complete assistance in filing civil or criminal case.",
+    icon: "📂",
   },
 ];
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Experience",
-    desc: "Two decades of handling complex family law cases across all courts.",
+    title: "Experienced Legal Notice Advocate",
+    desc: "Extensive experience in drafting effective legal notices for civil, criminal, and corporate matters.",
     icon: "🎖️",
   },
   {
-    title: "Client-First Approach",
-    desc: "Your well-being and outcome remain our unwavering priority throughout.",
-    icon: "🌟",
+    title: "Strategic & Result-Oriented Drafting",
+    desc: "Clear, firm and legally sound language designed to create immediate legal impact.",
+    icon: "📊",
   },
   {
-    title: "Strict Confidentiality",
-    desc: "Every detail of your case is handled with the utmost discretion and privacy.",
+    title: "Confidential & Professional Service",
+    desc: "Your matter is handled with strict confidentiality and professional ethics.",
     icon: "🔒",
   },
   {
-    title: "Transparent Pricing",
-    desc: "No hidden charges. Clear, upfront fee structures discussed before engagement.",
+    title: "Transparent & Affordable Fees",
+    desc: "Clear fee structure with no hidden charges and timely service delivery.",
     icon: "💎",
   },
 ];
 
 export const stats = [
-  ["500+", "Cases Resolved"],
-  ["98%", "Client Satisfaction"],
-  ["20+", "Years of Practice"],
+  ["2000+", "Legal Notices Drafted"],
+  ["90%", "Pre-Litigation Settlements Achieved"],
+  ["20+", "Years of Legal Experience"],
 ];
 
 export const testimonial = {
   quote:
-    "Going through a divorce felt overwhelming, but Sharma & Associates handled my case with extraordinary professionalism and genuine compassion. They didn't just fight for my rights — they made sure I understood every step of the process. I walked away with my dignity and my children's future secured.",
-  name: "Priya Mehta",
-  detail: "Client, Mutual Consent Divorce — Mumbai, 2023",
-  initial: "P",
+    "I was struggling to recover my pending payment. After sending a professionally drafted legal notice through Sharma & Associates, the opposite party settled the matter quickly without going to court.",
+  name: "Sandeep Agarwal",
+  detail: "Client, Money Recovery Legal Notice — Gautam Buddh Nagar, 2024",
+  initial: "S",
 };

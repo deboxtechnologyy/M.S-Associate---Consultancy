@@ -33,8 +33,161 @@ const TESTIMONIALS = [
   },
 ];
 
+const styles = `
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&display=swap');
+
+  .testimonials-section {
+    padding: clamp(60px, 10vw, 100px) clamp(16px, 5%, 60px);
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+  }
+
+  .testimonials-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #d39f17;
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: clamp(40px, 6vw, 64px);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #172e4e;
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+
+  .section-divider {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #d39f17, #f0c040);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  .card-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    display: none;
+    text-align: center;
+    padding: clamp(40px, 6vw, 64px) clamp(20px, 5vw, 48px);
+    background: linear-gradient(135deg, #fafafa, #f4f7fb);
+    border-radius: 12px;
+    border: 1px solid rgba(23,46,78,0.06);
+    box-shadow: 0 20px 60px rgba(23,46,78,0.07);
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .testimonial-card.active {
+    display: block;
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d39f17, #f0c040);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 15px rgba(211,159,23,0.4);
+    flex-shrink: 0;
+  }
+
+  .testimonial-text {
+    font-family: 'Playfair Display', serif;
+    color: #444;
+    font-size: clamp(0.9rem, 2vw, 1.08rem);
+    line-height: 1.9;
+    font-style: italic;
+    margin: 0 0 32px;
+  }
+
+  .divider-line {
+    width: 40px;
+    height: 2px;
+    background: #d39f17;
+    margin: 0 auto 20px;
+  }
+
+  .client-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #172e4e;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    margin-bottom: 4px;
+  }
+
+  .client-role {
+    color: #d39f17;
+    font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .dot-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .dot-btn {
+    height: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    padding: 0;
+    min-width: 10px;
+  }
+
+  .dot-btn.active-dot {
+    width: 32px;
+    background: #d39f17;
+  }
+
+  .dot-btn.inactive-dot {
+    width: 10px;
+    background: rgba(23,46,78,0.15);
+  }
+
+  /* Touch swipe hint on mobile */
+  @media (max-width: 480px) {
+    .testimonial-card {
+      touch-action: pan-y;
+    }
+  }
+`;
+
 export default function TestimonialsSection() {
   const [active, setActive] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,74 +196,68 @@ export default function TestimonialsSection() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleTouchStart = (e) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStart === null) return;
+    const diff = touchStart - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        setActive(prev => (prev + 1) % TESTIMONIALS.length);
+      } else {
+        setActive(prev => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+      }
+    }
+    setTouchStart(null);
+  };
+
   return (
-    <section id="testimonials" style={{ padding: "100px 5%", background: "#fff" }}>
-      <div style={{ maxWidth: "80rem", margin: "0 auto" }}>
+    <>
+      <style>{styles}</style>
+      <section id="testimonials" className="testimonials-section">
+        <div className="testimonials-inner">
 
-        {/* ── Section Header ── */}
-        <div style={{ textAlign: "center", marginBottom: "64px" }}>
-          <p className="section-tag">Client Stories</p>
-          <h2 className="playfair" style={{
-            fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: "700",
-            color: "#172e4e", marginBottom: "16px", marginTop: 0,
-          }}>
-            What Our Clients Say
-          </h2>
-          <div className="section-divider" />
-        </div>
-
-        {/* ── Testimonial Card ── */}
-        <div style={{ maxWidth: "880px", margin: "0 auto" }}>
-          {TESTIMONIALS.map((t, i) => (
-            <div key={i} style={{
-              display: i === active ? "block" : "none",
-              textAlign: "center", padding: "64px 48px",
-              background: "linear-gradient(135deg, #fafafa, #f4f7fb)",
-              borderRadius: "12px",
-              border: "1px solid rgba(23,46,78,0.06)",
-              boxShadow: "0 20px 60px rgba(23,46,78,0.07)",
-              position: "relative",
-            }}>
-              {/* Quote icon */}
-              <div style={{
-                position: "absolute", top: "-20px", left: "50%", transform: "translateX(-50%)",
-                width: "42px", height: "42px", borderRadius: "50%",
-                background: "linear-gradient(135deg, #d39f17, #f0c040)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "1.3rem",
-                boxShadow: "0 4px 15px rgba(211,159,23,0.4)",
-              }}>❝</div>
-
-              <p className="playfair" style={{
-                color: "#444", fontSize: "1.08rem", lineHeight: "1.9",
-                fontStyle: "italic", marginBottom: "32px", marginTop: 0,
-              }}>{t.text}</p>
-
-              <div style={{ width: "40px", height: "2px", background: "#d39f17", margin: "0 auto 20px" }} />
-              <div className="playfair" style={{ fontWeight: "700", color: "#172e4e", fontSize: "1rem", marginBottom: "4px" }}>
-                {t.name}
-              </div>
-              <div style={{ color: "#d39f17", fontSize: "0.75rem", letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: "700" }}>
-                {t.role}
-              </div>
-            </div>
-          ))}
-
-          {/* Dot navigation */}
-          <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "32px" }}>
-            {TESTIMONIALS.map((_, i) => (
-              <button key={i} onClick={() => setActive(i)} style={{
-                width: i === active ? "32px" : "10px",
-                height: "10px", borderRadius: "5px",
-                background: i === active ? "#d39f17" : "rgba(23,46,78,0.15)",
-                border: "none", cursor: "pointer",
-                transition: "all 0.35s", padding: 0,
-              }} />
-            ))}
+          {/* Section Header */}
+          <div className="section-header">
+            <p className="section-tag">Client Stories</p>
+            <h2 className="section-title">What Our Clients Say</h2>
+            <div className="section-divider" />
           </div>
-        </div>
 
-      </div>
-    </section>
+          {/* Testimonial Card */}
+          <div className="card-wrapper">
+            {TESTIMONIALS.map((t, i) => (
+              <div
+                key={i}
+                className={`testimonial-card${i === active ? " active" : ""}`}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
+                <div className="quote-icon">❝</div>
+                <p className="testimonial-text">{t.text}</p>
+                <div className="divider-line" />
+                <div className="client-name">{t.name}</div>
+                <div className="client-role">{t.role}</div>
+              </div>
+            ))}
+
+            {/* Dot navigation */}
+            <div className="dot-nav">
+              {TESTIMONIALS.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className={`dot-btn ${i === active ? "active-dot" : "inactive-dot"}`}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
   );
 }

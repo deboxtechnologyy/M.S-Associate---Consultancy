@@ -334,13 +334,13 @@ export function TableOfContentsSidebar({ items, activeSection, onScrollTo }) {
             Available Mon–Sat, 9am–7pm
           </p>
           <a
-            href="tel:+911234567890"
+            href="tel:+91 98188 03706"
             className="block w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-200"
             style={{ background: "#d39f17", color: "#172e4e" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#e5ad1e")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#d39f17")}
           >
-            +91 12345 67890
+          +91 98188 03706
           </a>
         </div>
         <div className="px-5 py-4 text-center" style={{ background: "#f9f5ee" }}>
@@ -348,7 +348,7 @@ export function TableOfContentsSidebar({ items, activeSection, onScrollTo }) {
             Or email us directly
           </p>
           <button className="mt-1 text-xs font-semibold underline" style={{ color: "#172e4e" }}>
-            hello@sharmalaw.in
+         contact@M.Sadvocates.in
           </button>
         </div>
       </div>

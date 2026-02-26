@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 export default function CTASection() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Cormorant+Garamond:wght@300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Cormorant+Garamond:wght@300;400;600&display=swap');
 
         .cta-section * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -13,7 +14,6 @@ export default function CTASection() {
           font-family: 'Cormorant Garamond', Georgia, serif;
         }
 
-        /* Diagonal gold rule */
         .cta-section::before {
           content: '';
           position: absolute;
@@ -31,10 +31,6 @@ export default function CTASection() {
           min-height: 560px;
           position: relative;
           z-index: 1;
-        }
-
-        .cta-content-wrap {
-          max-width: 660px;
         }
 
         /* ── LEFT: image side ── */
@@ -57,7 +53,6 @@ export default function CTASection() {
           transform: scale(1.04);
         }
 
-        /* Overlay gradient merging image into content */
         .cta-image-wrap::after {
           content: '';
           position: absolute;
@@ -72,8 +67,6 @@ export default function CTASection() {
             transparent 50%
           );
         }
-
-
 
         /* Badge on image */
         .cta-badge {
@@ -125,7 +118,6 @@ export default function CTASection() {
           position: relative;
         }
 
-        /* Ambient orb */
         .cta-content::before {
           content: '';
           position: absolute;
@@ -161,7 +153,7 @@ export default function CTASection() {
 
         .cta-heading {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(2rem, 3vw, 2.9rem);
+          font-size: clamp(1.7rem, 3vw, 2.9rem);
           font-weight: 700;
           color: #fff;
           line-height: 1.18;
@@ -283,19 +275,143 @@ export default function CTASection() {
           font-size: 1rem;
         }
 
-        /* Responsive */
+        /* ── RESPONSIVE BREAKPOINTS ── */
+
+        /* Large desktops (1200px+): default styles apply */
+
+        /* Medium-large: 1024px – 1199px */
+        @media (max-width: 1199px) {
+          .cta-content {
+            padding: 60px 48px 60px 44px;
+          }
+        }
+
+        /* Tablets landscape / small laptops: 860px – 1023px */
+        @media (max-width: 1023px) {
+          .cta-content {
+            padding: 52px 36px 52px 36px;
+          }
+          .cta-body {
+            max-width: 100%;
+          }
+        }
+
+        /* Tablets portrait & large phones landscape: 600px – 859px */
         @media (max-width: 860px) {
           .cta-inner {
             grid-template-columns: 1fr;
           }
           .cta-image-wrap {
-            height: 300px;
+            height: 320px;
           }
           .cta-image-wrap::after {
-            background: linear-gradient(to bottom, transparent 50%, #0f1e30 100%);
+            background: linear-gradient(to bottom, transparent 40%, #0f1e30 95%);
           }
           .cta-content {
-            padding: 52px 28px 60px;
+            padding: 52px 40px 60px;
+          }
+          .cta-badge {
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 16px;
+          }
+        }
+
+        /* Small tablets / large phones: 480px – 599px */
+        @media (max-width: 599px) {
+          .cta-image-wrap {
+            height: 260px;
+          }
+          .cta-content {
+            padding: 44px 28px 52px;
+          }
+          .cta-heading {
+            font-size: clamp(1.6rem, 6vw, 2rem);
+          }
+          .cta-body {
+            font-size: 1rem;
+            margin-bottom: 32px;
+          }
+          .cta-trust {
+            gap: 16px;
+            margin-bottom: 32px;
+          }
+          .cta-buttons {
+            flex-direction: column;
+            gap: 12px;
+          }
+          .btn-gold,
+          .btn-outline {
+            width: 100%;
+            justify-content: center;
+            padding: 16px 24px;
+          }
+        }
+
+        /* Small phones: up to 479px */
+        @media (max-width: 479px) {
+          .cta-image-wrap {
+            height: 220px;
+          }
+          .cta-content {
+            padding: 36px 20px 44px;
+          }
+          .cta-tag {
+            font-size: 0.68rem;
+          }
+          .cta-tag::before,
+          .cta-tag::after {
+            width: 18px;
+          }
+          .cta-heading {
+            font-size: clamp(1.4rem, 7vw, 1.75rem);
+            margin-bottom: 18px;
+          }
+          .cta-divider {
+            margin-bottom: 18px;
+          }
+          .cta-body {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 28px;
+          }
+          .cta-trust {
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 28px;
+          }
+          .cta-trust-item {
+            font-size: 0.75rem;
+          }
+          .cta-badge {
+            padding: 8px 12px;
+            gap: 8px;
+          }
+          .cta-badge-icon {
+            width: 28px;
+            height: 28px;
+            font-size: 13px;
+          }
+          .cta-badge-text strong {
+            font-size: 0.78rem;
+          }
+          .cta-badge-text span {
+            font-size: 0.68rem;
+          }
+        }
+
+        /* Very small phones: up to 360px */
+        @media (max-width: 360px) {
+          .cta-image-wrap {
+            height: 190px;
+          }
+          .cta-content {
+            padding: 28px 16px 36px;
+          }
+          .btn-gold,
+          .btn-outline {
+            font-size: 0.75rem;
+            padding: 14px 20px;
           }
         }
       `}</style>
@@ -309,8 +425,13 @@ export default function CTASection() {
               src="/src/assets/home-img/img1.jpg"
               alt="Law office"
             />
-
-            
+            <div className="cta-badge">
+              <div className="cta-badge-icon">⚖️</div>
+              <div className="cta-badge-text">
+                <strong>25+ Years Experience</strong>
+                <span>Trusted Legal Advocacy</span>
+              </div>
+            </div>
           </div>
 
           {/* ── Content Side ── */}
@@ -338,10 +459,11 @@ export default function CTASection() {
             </div>
 
             <div className="cta-buttons">
-              <button className="btn-gold">Book Free Consultation</button>
+              <Link to="/contact">
+              <button className="btn-gold">Book Free Consultation</button></Link>
               <button className="btn-outline">
                 <span className="phone-icon">📞</span>
-                +91-XXXXXXXXXX
+                +91 98188 03706
               </button>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
+import { Link } from "react-router-dom";
 const REASONS = [
   {
     id: "01",
@@ -85,12 +85,14 @@ function useInView(threshold = 0.1) {
 
 export default function WhyChooseUs() {
   const [headerRef, headerInView] = useInView(0.2);
-  const [cardsRef, cardsInView] = useInView(0.05); // ← low threshold = triggers early
+  const [cardsRef, cardsInView] = useInView(0.05);
 
   return (
     <>
       <style>{`
-        * { box-sizing: border-box; }
+        *, *::before, *::after { box-sizing: border-box; }
+
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
         .wcu-wrap {
           padding: 120px 5% 140px;
@@ -104,7 +106,8 @@ export default function WhyChooseUs() {
           content: '"';
           position: absolute; top: 40px; left: 3%;
           font-family: 'Cormorant Garamond', serif;
-          font-size: 28rem; font-weight: 700;
+          font-size: clamp(14rem, 25vw, 28rem);
+          font-weight: 700;
           color: rgba(23,46,78,0.025);
           line-height: 1; pointer-events: none; user-select: none;
         }
@@ -117,17 +120,26 @@ export default function WhyChooseUs() {
           pointer-events: none;
         }
 
+        .wcu-inner {
+          max-width: 1280px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+          width: 100%;
+        }
+
+        /* ── Header ── */
         .wcu-header {
-          display: grid; grid-template-columns: 1fr 1fr;
-          gap: 60px; align-items: end; margin-bottom: 80px;
-          opacity: 0; transform: translateY(28px);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: end;
+          margin-bottom: 80px;
+          opacity: 0;
+          transform: translateY(28px);
           transition: opacity 0.7s ease, transform 0.7s ease;
         }
         .wcu-header.visible { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 768px) {
-          .wcu-header { grid-template-columns: 1fr; gap: 24px; }
-        }
 
         .wcu-tag {
           font-size: 0.68rem; font-weight: 500;
@@ -149,6 +161,12 @@ export default function WhyChooseUs() {
           border-radius: 2px; margin: 20px 0;
         }
 
+        .wcu-left-sub {
+          font-size: 0.875rem; font-weight: 300;
+          line-height: 1.85; color: #8a97a8;
+          margin: 0; max-width: 380px;
+        }
+
         .wcu-right-text {
           font-size: 0.875rem; font-weight: 300;
           line-height: 1.9; color: #8a97a8; margin: 0 0 28px;
@@ -162,19 +180,22 @@ export default function WhyChooseUs() {
           border-bottom: 1px solid rgba(211,159,23,0.4);
           padding-bottom: 3px;
           transition: color 0.3s, border-color 0.3s, gap 0.3s; cursor: pointer;
+          background: none; border-top: none; border-left: none; border-right: none;
         }
-        .wcu-cta:hover { color: #d39f17; border-color: #d39f17; gap: 16px; }
+        .wcu-cta:hover { color: #d39f17; border-bottom-color: #d39f17; gap: 16px; }
 
+        /* ── Cards Grid ── */
         .wcu-grid {
-          display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
         }
-        @media (max-width: 900px) { .wcu-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 520px) { .wcu-grid { grid-template-columns: 1fr; } }
 
         .wcu-card {
           background: #f6f4f0;
           border: 1px solid rgba(23,46,78,0.06);
-          border-radius: 16px; padding: 36px 32px;
+          border-radius: 16px;
+          padding: 36px 32px;
           position: relative; overflow: hidden; cursor: default;
           opacity: 0; transform: translateY(24px);
           transition:
@@ -185,7 +206,6 @@ export default function WhyChooseUs() {
             box-shadow 0.3s ease;
         }
         .wcu-card.visible { opacity: 1; transform: translateY(0); }
-
         .wcu-card:hover {
           background: #fff;
           border-color: rgba(211,159,23,0.3);
@@ -211,6 +231,7 @@ export default function WhyChooseUs() {
           display: flex; align-items: center; justify-content: center;
           margin-bottom: 24px; color: #172e4e;
           transition: background 0.35s, border-color 0.35s, color 0.35s, transform 0.35s;
+          flex-shrink: 0;
         }
         .wcu-card:hover .wcu-card-icon {
           background: #172e4e; border-color: #172e4e;
@@ -251,10 +272,63 @@ export default function WhyChooseUs() {
           font-size: 0.82rem; font-weight: 300;
           line-height: 1.85; color: #8a97a8; margin: 0;
         }
+
+        /* ───────────── RESPONSIVE ───────────── */
+
+        /* Large tablets (≤1100px) */
+        @media (max-width: 1100px) {
+          .wcu-wrap { padding: 90px 5% 110px; }
+          .wcu-header { gap: 40px; margin-bottom: 64px; }
+          .wcu-grid { gap: 20px; }
+          .wcu-card { padding: 30px 26px; }
+        }
+
+        /* Tablets — 2-col grid, stack header (≤900px) */
+        @media (max-width: 900px) {
+          .wcu-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Tablets portrait — stack header (≤768px) */
+        @media (max-width: 768px) {
+          .wcu-wrap { padding: 72px 6% 90px; }
+          .wcu-header {
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 52px;
+          }
+          .wcu-left-sub { max-width: 100%; }
+          .wcu-grid { gap: 16px; }
+          .wcu-card { padding: 28px 24px; }
+          .wcu-card-id { font-size: 2.8rem; right: 28px; top: 22px; }
+        }
+
+        /* Large phones (≤600px) */
+        @media (max-width: 600px) {
+          .wcu-wrap { padding: 56px 5% 72px; }
+          .wcu-card { padding: 24px 20px; border-radius: 12px; }
+          .wcu-card-icon { width: 44px; height: 44px; margin-bottom: 18px; }
+          .wcu-card-title { font-size: 1.2rem; }
+          .wcu-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+          .wcu-cta { font-size: 0.68rem; }
+        }
+
+        /* Small phones — single column (≤520px) */
+        @media (max-width: 520px) {
+          .wcu-grid { grid-template-columns: 1fr; gap: 12px; }
+          .wcu-card:hover { transform: translateY(-3px); }
+        }
+
+        /* Very small phones (≤380px) */
+        @media (max-width: 380px) {
+          .wcu-wrap { padding: 44px 4% 60px; }
+          .wcu-title { font-size: 1.85rem; }
+          .wcu-card { padding: 22px 18px; }
+          .wcu-card-id { font-size: 2.4rem; }
+        }
       `}</style>
 
       <section className="wcu-wrap" id="why-choose-us">
-        <div style={{ maxWidth: "80rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div className="wcu-inner">
 
           {/* Header */}
           <div ref={headerRef} className={`wcu-header${headerInView ? " visible" : ""}`}>
@@ -265,7 +339,7 @@ export default function WhyChooseUs() {
                 <strong>Fights</strong> for <em>You</em>
               </h2>
               <div className="wcu-divider" />
-              <p style={{ fontSize: "0.875rem", fontWeight: "300", lineHeight: "1.85", color: "#8a97a8", margin: 0, maxWidth: "380px" }}>
+              <p className="wcu-left-sub">
                 Choosing the right legal partner can define the outcome of your case. Here's why thousands of clients trust us with what matters most.
               </p>
             </div>
@@ -276,11 +350,12 @@ export default function WhyChooseUs() {
               <p className="wcu-right-text" style={{ marginBottom: "32px" }}>
                 Our firm combines decades of legal experience with a relentless commitment to achieving the outcomes our clients deserve — efficiently and ethically.
               </p>
-              <span className="wcu-cta">Schedule a free consultation <span>→</span></span>
+              <Link to="/contact">
+              <button className="wcu-cta">Schedule a free consultation <span>→</span></button></Link>
             </div>
           </div>
 
-          {/* Cards — apna ref, low threshold */}
+          {/* Cards */}
           <div ref={cardsRef} className="wcu-grid">
             {REASONS.map(({ id, title, short, desc, icon }, i) => (
               <div
