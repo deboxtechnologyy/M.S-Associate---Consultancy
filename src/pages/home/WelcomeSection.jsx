@@ -186,7 +186,7 @@ export default function WelcomeSection() {
             <div className="ws-bar" />
             <p className="ws-tag">Welcome to Our Firm</p>
             <h2 className="ws-heading">
-              Your Trusted Partner<br />in Legal Matters
+              Justice Advisor Legal <br />Point
             </h2>
             <p className="ws-body">
               At M.S. Advocate, we believe that every individual deserves access to superior legal

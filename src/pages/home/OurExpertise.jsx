@@ -1,14 +1,13 @@
 const EXPERTISE_BARS = [
-  { area: "High Court Practice",     years: "20+ Years", pct: 92 },
-  { area: "Supreme Court Appeals",   years: "15+ Years", pct: 80 },
   { area: "Consumer Forums",         years: "18+ Years", pct: 88 },
   { area: "Arbitration & Mediation", years: "12+ Years", pct: 75 },
 ];
 
 const EXPERTISE_GRID = [
-  { t: "High Court",     s: "Expert representation", icon: "🏛️", dark: true  },
-  { t: "Supreme Court",  s: "Appellate expertise",   icon: "⚖️", dark: false },
-  { t: "Consumer Forum", s: "Consumer protection",   icon: "🛡️", dark: false },
+   { t: "Consumer Forum", s: "Consumer protection",   icon: "🛡️", dark: true },
+  { t: "Justice. Integrity. Results.",     s: " Defending Your Rights.", icon: "🏛️", dark: false  },
+  { t: "Committed to Justice",  s: "Experience and Precision.",   icon: "⚖️", dark: false },
+ 
   { t: "Arbitration",    s: "Out-of-court solutions",icon: "🤝", dark: true  },
 ];
 

@@ -75,7 +75,7 @@ export const services = [
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Family Law Experience",
+    title: "10 Years of Family Law Experience",
     desc: "Extensive courtroom experience handling complex divorce and matrimonial disputes.",
     icon: "🎖️",
   },
@@ -99,12 +99,12 @@ export const whyChooseUs = [
 export const stats = [
   ["1000+", "Divorce & Matrimonial Cases Handled"],
   ["95%", "Successful Settlements & Orders"],
-  ["20+", "Years of Legal Practice"],
+  ["10+", "Years of Legal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "My divorce case was emotionally overwhelming, but Sharma & Associates handled everything with professionalism and compassion. Their guidance on maintenance and custody protected my future and my child’s well-being.",
+    "My divorce case was emotionally overwhelming, but M.S Associate & Consultancy handled everything with professionalism and compassion. Their guidance on maintenance and custody protected my future and my child’s well-being.",
   name: "Neha Verma",
   detail: "Client, Divorce & Maintenance Matter — Gautam Buddh Nagar, 2024",
   initial: "N",

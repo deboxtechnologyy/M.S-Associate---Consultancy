@@ -439,7 +439,7 @@ export default function ServicesSection() {
             </p>
             <div className="svc-footer-contact">
               <div className="svc-footer-dot" />
-              <span className="svc-footer-phone">Available 24 / 7 — +1 (800) 000-0000</span>
+              <span className="svc-footer-phone">Available 24 / 7 — +91 98188 03706 </span>
             </div>
           </div>
 

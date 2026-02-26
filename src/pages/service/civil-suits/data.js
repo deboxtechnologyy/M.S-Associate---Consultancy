@@ -75,7 +75,7 @@ export const services = [
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Civil Litigation Experience",
+    title: "10 Years of Civil Litigation Experience",
     desc: "Extensive courtroom experience in handling complex civil suits across District Courts and High Courts.",
     icon: "🎖️",
   },
@@ -99,12 +99,12 @@ export const whyChooseUs = [
 export const stats = [
   ["1200+", "Civil Cases Handled"],
   ["90%", "Successful Decrees & Settlements"],
-  ["20+", "Years of Court Practice"],
+  ["10+", "Years of Court Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "I was facing a serious property dispute within my family. Sharma & Associates handled my civil suit with professionalism and strong legal arguments. The court granted injunction in my favor, protecting my property rights.",
+    "I was facing a serious property dispute within my family. M.S Associate & Consultancy handled my civil suit with professionalism and strong legal arguments. The court granted injunction in my favor, protecting my property rights.",
   name: "Rajesh Singh",
   detail: "Client, Property Civil Suit — Gautam Buddh Nagar, 2024",
   initial: "R",

@@ -279,9 +279,9 @@ export default function AdvocateContact() {
         <div style={{ maxWidth: 1300, margin: "0 auto" }}>
           <div className="info-grid">
             {[
-              { icon: "📍", label: "Visit Our Office", lines: ["42, Lawyers' Chamber Block", "District Court Complex", "New Delhi – 110 003, India"], sub: "Mon – Sat · 9:30 AM – 6:00 PM" },
-              { icon: "📞", label: "Call Us", lines: ["+91 98188 03706 (Primary)", "+91 98188 03706 (Office)", "Emergency: +91 98188 03706"], sub: "Emergency line available 24 / 7" },
-              { icon: "✉️", label: "Write to Us", lines: ["contact@M.Sadvocates.in", "cases@M.Sadvocates.in", ""], sub: "Response within 24 business hours" },
+              { icon: "📍", label: "Visit Our Office", lines: ["shop no.3 near DISC , District Court , Gautam Budh Nagar"], sub: "Mon – Sat · 9:30 AM – 6:00 PM" },
+              { icon: "📞", label: "Call Us", lines: ["+91 98188 03706 (Primary)",], sub: "Emergency line available 24 / 7" },
+              { icon: "✉️", label: "Write to Us", lines: ["manojjandiya@gmail.com", ""], sub: "Response within 24 business hours" },
             ].map((c, i) => (
               <div key={i} className="hcard" {...reveal(`ic${i}`, i * 0.07)} style={{ background: "#fff", borderRadius: 16, padding: "28px 26px", border: "1px solid rgba(23,46,78,0.07)", boxShadow: "0 4px 20px rgba(23,46,78,0.05)", ...reveal(`ic${i}`, i * 0.07).style }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 16, marginBottom: 18 }}>
@@ -317,7 +317,7 @@ export default function AdvocateContact() {
             </p>
           </div>
 
-          <div className="form-grid">
+          <div className="form-grid xl:mt-8">
 
             <div {...reveal("fm")}>
               {sent ? (
@@ -383,7 +383,7 @@ export default function AdvocateContact() {
                   <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                     {[
                       "Enrolled with the Bar Council of Delhi",
-                      "Appearances in Supreme Court & High Courts",
+                      // "Appearances in Supreme Court & High Courts",
                       "Multilingual team — English, Hindi, Urdu",
                       "Virtual consultations available nationwide",
                     ].map(t => (
@@ -459,30 +459,20 @@ export default function AdvocateContact() {
               <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid rgba(23,46,78,0.1)", boxShadow: "0 8px 32px rgba(23,46,78,0.09)" }}>
                 <iframe
                   title="M.S & Associates Office Location"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=77.18%2C28.62%2C77.25%2C28.67&layer=mapnik&marker=28.6400%2C77.2150"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.3114027234647!2d77.48185027474649!3d28.500277290075626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceb0010dc76f1%3A0x6516e5d51be8a523!2sGautam%20Budh%20Nagar%20District%20Court!5e0!3m2!1sen!2sin!4v1772107184491!5m2!1sen!2sin"
                   style={{ width: "100%", height: 310, border: 0, display: "block" }}
                   loading="lazy"
                 />
                 <div style={{ background: "#fff", padding: "18px 22px", display: "flex", alignItems: "flex-start", gap: 12, borderTop: "1px solid rgba(23,46,78,0.07)" }}>
                   <div className="ico" style={{ fontSize: 16 }}>📍</div>
                   <div>
-                    <div className="pf" style={{ fontSize: 15, fontWeight: 700, color: P, marginBottom: 3 }}>42, Lawyers' Chamber Block</div>
-                    <div className="pp" style={{ fontSize: 13, color: "#7a8899" }}>District Court Complex, New Delhi – 110 003</div>
+                    <div className="pf" style={{ fontSize: 15, fontWeight: 700, color: P, marginBottom: 3 }}>Shop no.3 near DISC </div>
+                    <div className="pp" style={{ fontSize: 13, color: "#7a8899" }}>District Court , Gautam Budh Nagar</div>
                   </div>
                 </div>
               </div>
 
-              <div style={{ marginTop: 14 }} className="transport-grid-wrap">
-                <div className="transport-grid">
-                  {[["🚇", "Patel Chowk Metro", "3 min walk"], ["🅿️", "Paid Parking", "Nearby"], ["🚌", "DTC Bus Stop", "50 m away"]].map(([ic, l, s]) => (
-                    <div key={l} style={{ background: "#fff", border: "1px solid rgba(23,46,78,0.07)", borderRadius: 10, padding: "12px 10px", textAlign: "center" }}>
-                      <div style={{ fontSize: 18, marginBottom: 5 }}>{ic}</div>
-                      <div className="pp" style={{ fontSize: 11.5, fontWeight: 600, color: P, lineHeight: 1.3 }}>{l}</div>
-                      <div className="pp" style={{ fontSize: 11, color: "#a0adb8", marginTop: 2 }}>{s}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

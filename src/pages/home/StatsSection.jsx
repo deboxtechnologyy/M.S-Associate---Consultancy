@@ -14,7 +14,7 @@ if (typeof document !== "undefined") {
 
 const STATS = [
   {
-    value: 2500, suffix: "+", label: "Cases Won",
+    value: 1200, suffix: "+", label: "Cases Won",
     desc: "Successfully resolved across all practice areas",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -32,7 +32,7 @@ const STATS = [
     ),
   },
   {
-    value: 25, suffix: "+", label: "Years Experience",
+    value: 10, suffix: "+", label: "Years Experience",
     desc: "Decades of courtroom and legal expertise",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -387,7 +387,7 @@ export default function StatsSection() {
                   color: "#172e4e",
                 }}
               >
-                Since 1999
+                Since 2016
               </span>
             </div>
           </div>

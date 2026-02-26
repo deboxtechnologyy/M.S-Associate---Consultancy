@@ -99,12 +99,12 @@ export const whyChooseUs = [
 export const stats = [
   ["1000+", "Cheque Bounce Notices Sent"],
   ["92%", "Successful Recovery Rate"],
-  ["20+", "Years of Legal Practice"],
+  ["10+", "Years of Legal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "After my cheque was dishonoured, I was unsure how to recover my money. Sharma & Associates immediately sent a legal notice and handled the court case professionally. I successfully recovered my amount with compensation.",
+    "After my cheque was dishonoured, I was unsure how to recover my money. M.S Associate & Consultancy immediately sent a legal notice and handled the court case professionally. I successfully recovered my amount with compensation.",
   name: "Amit Khanna",
   detail: "Client, NI Act 138 Case — Gautam Buddh Nagar, 2024",
   initial: "A",

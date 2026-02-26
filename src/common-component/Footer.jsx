@@ -414,16 +414,9 @@ const Footer = () => {
               <div className="brand-logo adv-title">M.S Associates &amp; Consultancy</div>
               <p className="logo-tagline">Advocates &amp; Legal Consultants</p>
               <p className="brand-desc">
-                With over 25 years of courtroom experience, we stand as a pillar of legal excellence — delivering justice with integrity, precision, and unwavering commitment to our clients.
-              </p>
-              <div className="bar-number">
-                <span className="bar-dot" />
-                Bar Council Reg. No. D/987/2000
-              </div>
-              <div className="bar-number" style={{ display: "block", marginBottom: "24px" }}>
-                <span className="bar-dot" style={{ display: "inline-block" }} />
-                {" "}Supreme Court of India — Enrolled
-              </div>
+10 years of legal expertise. Fearless representation. Trusted advocacy. We fight for your rights with dedication, honesty, and proven courtroom strength.              </p>
+           
+           
               <div className="social-row">
                 {socials.map(s => (
                   <a key={s.name} href={`#${s.name.toLowerCase()}`} className="social-btn" title={s.name}>{s.icon}</a>

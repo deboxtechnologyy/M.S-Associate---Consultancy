@@ -75,7 +75,7 @@ export const services = [
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Criminal Law Experience",
+    title: "10 Years of Criminal Law Experience",
     desc: "Extensive experience handling complex criminal litigation cases across District Courts and High Courts.",
     icon: "🎖️",
   },
@@ -99,12 +99,12 @@ export const whyChooseUs = [
 export const stats = [
   ["1500+", "Criminal Cases Handled"],
   ["93%", "Successful Outcomes"],
-  ["20+", "Years of Criminal Practice"],
+  ["10+", "Years of Criminal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "I was falsely implicated in a criminal case and was extremely stressed. Sharma & Associates provided immediate legal support, secured my bail, and handled the trial professionally. Their strong courtroom representation protected my rights.",
+    "I was falsely implicated in a criminal case and was extremely stressed. M.S Associate & Consultancy provided immediate legal support, secured my bail, and handled the trial professionally. Their strong courtroom representation protected my rights.",
   name: "Vikram Sharma",
   detail: "Client, Criminal Defense Matter — Gautam Buddh Nagar, 2024",
   initial: "V",

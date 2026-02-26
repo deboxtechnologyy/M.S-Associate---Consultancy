@@ -348,7 +348,7 @@ export function TableOfContentsSidebar({ items, activeSection, onScrollTo }) {
             Or email us directly
           </p>
           <button className="mt-1 text-xs font-semibold underline" style={{ color: "#172e4e" }}>
-         contact@M.Sadvocates.in
+    manojjandiya@gmail.com
           </button>
         </div>
       </div>

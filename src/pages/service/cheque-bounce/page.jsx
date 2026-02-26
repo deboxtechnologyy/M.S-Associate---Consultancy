@@ -292,10 +292,7 @@ export default function DivorceServicePage() {
           <span className="cursor-pointer hover:underline" style={{ color: "#172e4e", fontWeight: 500 }}>
             Home
           </span>
-          <span style={{ color: "#aab4c0" }}>›</span>
-          <span className="cursor-pointer hover:underline" style={{ color: "#172e4e", fontWeight: 500 }}>
-            Practice Areas
-          </span>
+        
           <span style={{ color: "#aab4c0" }}>›</span>
           <span style={{ color: "#b8860b", fontWeight: 600 }}>Banking &amp; Financial Law Division</span>
         </div>

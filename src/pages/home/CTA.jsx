@@ -428,7 +428,7 @@ export default function CTASection() {
             <div className="cta-badge">
               <div className="cta-badge-icon">⚖️</div>
               <div className="cta-badge-text">
-                <strong>25+ Years Experience</strong>
+                <strong>10 Years Experience</strong>
                 <span>Trusted Legal Advocacy</span>
               </div>
             </div>

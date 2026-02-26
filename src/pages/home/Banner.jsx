@@ -308,7 +308,7 @@ export default function HeroSection() {
           <div className="hero-content">
 
             {/* Eyebrow */}
-            <div className="hero-eyebrow">High Court &amp; District Court</div>
+            <div className="hero-eyebrow">Justice Advisor Legal Point</div>
 
             {/* SEO H1 */}
             <h1 itemProp="name" className="hero-h1">
@@ -335,12 +335,12 @@ export default function HeroSection() {
             {/* Stats row */}
             <div className="hero-stats">
               <div className="hero-stat">
-                <span className="hero-stat-num">25+</span>
+                <span className="hero-stat-num">10+</span>
                 <span className="hero-stat-label">Years Active</span>
               </div>
               <div className="hero-stat-divider" />
               <div className="hero-stat">
-                <span className="hero-stat-num">1200+</span>
+                <span className="hero-stat-num">1200</span>
                 <span className="hero-stat-label">Cases Won</span>
               </div>
               <div className="hero-stat-divider" />

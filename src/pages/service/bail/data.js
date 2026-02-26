@@ -75,7 +75,7 @@ export const services = [
 
 export const whyChooseUs = [
   {
-    title: "20+ Years of Criminal Law Experience",
+    title: "10+ Years of Criminal Law Experience",
     desc: "Extensive courtroom experience in handling bail matters across District Courts and High Courts.",
     icon: "🎖️",
   },
@@ -99,12 +99,12 @@ export const whyChooseUs = [
 export const stats = [
   ["800+", "Bail Applications Handled"],
   ["95%", "Successful Bail Orders"],
-  ["20+", "Years of Criminal Practice"],
+  ["10", "Years of Criminal Practice"],
 ];
 
 export const testimonial = {
   quote:
-    "I was extremely stressed after the FIR was lodged against me, but Sharma & Associates acted immediately and secured my anticipatory bail. Their legal strategy, confidence, and courtroom arguments gave me immense relief.",
+    "I was extremely stressed after the FIR was lodged against me, but M.S Associate & Consultancy acted immediately and secured my anticipatory bail. Their legal strategy, confidence, and courtroom arguments gave me immense relief.",
   name: "Rohit Verma",
   detail: "Client, Anticipatory Bail Matter — Gautam Buddh Nagar, 2024",
   initial: "R",

@@ -49,10 +49,10 @@ const PRACTICE_AREAS = [
 ];
 
 const STATS = [
-  { value: "22+", label: "Years at the Bar" },
-  { value: "1,200+", label: "Cases Argued" },
-  { value: "15+", label: "Courts Practised In" },
-  { value: "94%", label: "Favourable Outcomes" },
+  { value: "10+", label: "Years at the Bar" },
+  { value: "1,200", label: "Cases Won" },
+  { value: "1200", label: "happy clients" },
+  { value: "98%", label: "Favourable Outcomes" },
 ];
 
 const VALUES = [
@@ -413,10 +413,10 @@ export default function AdvocateAboutPage() {
 
       <div className="absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-4 bg-[#172e4e] text-white rounded-xl p-4 sm:p-5 shadow-xl max-w-[160px] sm:max-w-[190px]">
         <p className="font-playfair font-bold text-2xl sm:text-3xl gold cases-card-value">
-          800+
+          1200+
         </p>
         <p className="font-poppins text-xs text-white/60 mt-1 cases-card-label">
-          Cases handled across courts
+          Cases handled 
         </p>
       </div>
     </div>
@@ -453,7 +453,7 @@ export default function AdvocateAboutPage() {
         Expert Legal Representation in Noida & Greater Noida
       </h2>
 
-      <p className="font-poppins font-light text-[#172e4e]/60 mt-4 max-w-2xl mx-auto text-sm sm:text-base body-text">
+      <p className="font-poppins font-light text-[#172e4e]/60 mt-4 max-w-4xl mx-auto text-sm sm:text-base body-text">
         Advocate Manoj Kumar provides professional legal services in 
         Gautam Buddh Nagar District Court, Noida, and Greater Noida. 
         With expertise in civil litigation, criminal defense, family disputes, 
@@ -614,7 +614,7 @@ export default function AdvocateAboutPage() {
       Commitment to Legal Excellence in Every Case
     </h2>
 
-    <p className="font-poppins font-light text-white/65 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 sm:mb-14 excellence-intro">
+    <p className="font-poppins font-light text-white/65 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto mb-10 sm:mb-14 excellence-intro">
       Legal excellence is not defined by the size of a case, but by the
       dedication applied to it. Whether handling civil disputes, criminal
       defense matters, bail applications, or property litigation in

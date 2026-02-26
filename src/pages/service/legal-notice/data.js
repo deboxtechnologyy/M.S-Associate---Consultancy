@@ -99,12 +99,12 @@ export const whyChooseUs = [
 export const stats = [
   ["2000+", "Legal Notices Drafted"],
   ["90%", "Pre-Litigation Settlements Achieved"],
-  ["20+", "Years of Legal Experience"],
+  ["10+", "Years of Legal Experience"],
 ];
 
 export const testimonial = {
   quote:
-    "I was struggling to recover my pending payment. After sending a professionally drafted legal notice through Sharma & Associates, the opposite party settled the matter quickly without going to court.",
+    "I was struggling to recover my pending payment. After sending a professionally drafted legal notice through M.S Associate & Consultancy, the opposite party settled the matter quickly without going to court.",
   name: "Sandeep Agarwal",
   detail: "Client, Money Recovery Legal Notice — Gautam Buddh Nagar, 2024",
   initial: "S",
