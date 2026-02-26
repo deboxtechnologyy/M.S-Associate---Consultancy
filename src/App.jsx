@@ -18,6 +18,7 @@ import DivorcePage from './pages/service/divorce-and-family-court-cases/page'
 import LegalNotice from './pages/service/legal-notice/page'
 import AboutPage from './pages/about/About'
 import ContactPage from './pages/contact/Contact'
+import WhatsAppIcon from './common-component/Icon'
 
 
 
@@ -114,7 +115,7 @@ function App() {
     </div>
   }/>
   </Routes>
-
+<WhatsAppIcon/>
   <Footer/>
 
 </Router>
